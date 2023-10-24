@@ -7,6 +7,9 @@ public class deneme {
 
         System.out.println("team 5 proje");
 
+        System.out.println("ben taha");
+
+
         System.out.println("Merhaba arkadaşlar");
       
         System.out.println("deneme3");
@@ -16,6 +19,10 @@ public class deneme {
 
 
 
-    }
 
+
+
+
+
+    }
 }
