@@ -9,53 +9,66 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 public class Driver {
-    /*
-     JUnit'de WebDriver objesi TestBase'den geliyordu
-     TestNG extends ile baglanma zorunlulugunu ortadan kaldirmak
-     ve testi yazanlara daha fazla kontrol imkani vermek icin
-     TestBase yerine Driver class'inda static 2 method ile
-     driver olusturma ve kapatma islemlerini yapmayi tercih etmistir
-     */
+    private static WebDriver driver;
     private Driver(){
-        // Bu constructor default constructor ile ayni islevi yapan parametresiz constructor'dir
-        // buna erisimi kontrol edebilecegimiz icin bu constructor'i olusturduk
+        /* Singleton pattern kullanilarak istenmeyen yontemlerle
+           driver objesine erisilmesini engelledik
+
+           Constructor'i private yaparak bu class'dan obje olusturularak
+           class uyelerinin kullanilmasinin onune gectik
+
+         */
     }
-    static WebDriver driver; // biz deger atamadigimiz icin Java default olarak null point eder
+
     public static WebDriver getDriver(){
-        String browser = ConfigReader.getProperty("browser");
-        if (driver == null){
-            switch (browser){
-                case "safari" :
-                    WebDriverManager.safaridriver().setup();
-                    driver= new SafariDriver();
-                    break;
-                case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
+
+
+        String istenenBrowser = ConfigReader.getProperty("browser");
+        // chrome, firefox, safari, edge
+
+
+        if(driver == null){
+
+            switch (istenenBrowser){
+                case "firefox" :
+
                     driver= new FirefoxDriver();
                     break;
+                case "safari" :
+
+                    driver= new SafariDriver();
+                    break;
+
                 case "edge" :
-                    WebDriverManager.edgedriver().setup();
+
                     driver = new EdgeDriver();
                     break;
-                /*
-                case "headless-chrome" :
-                    ChromeOptions chromeOptions=new ChromeOptions();
-                    chromeOptions.setHeadless(true);
-                    driver=new ChromeDriver(chromeOptions);
-                    break;
-                 */
                 default:
-                    WebDriverManager.chromedriver().setup();
+
                     driver = new ChromeDriver();
+
             }
+
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
         return driver;
     }
+
+
     public static void closeDriver(){
+
         if (driver != null){
             driver.close();
+            driver=null;
+        }
+    }
+
+    public static void quitDriver(){
+
+        if (driver != null){
+            driver.quit();
             driver=null;
         }
     }
