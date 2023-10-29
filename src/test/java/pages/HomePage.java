@@ -16,6 +16,23 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
     public WebElement signInButton;
 
+    //Homepage>> LoginLink>> Email Text Box // ayse
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement emailtextBox;
+
+    ////Homepage>> LoginLink>> Password Text Box // ayse
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement passwordTextBox;
+
+   //Homepage>> LoginLink>> Logın Butonu // ayse
+   @FindBy(xpath = "//button[@class='btn btn-primary']")
+   public WebElement loginButonu;
+
+    //Homepage>> LoginLink>> Dashboard
+   @FindBy (className = "nav-link p-0 active")
+    public WebElement dashboardHeardText;
+
+
 
 
 
