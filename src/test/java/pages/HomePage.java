@@ -20,7 +20,7 @@ public class HomePage {
     @FindBy(xpath = "//input[@id='email']")
     public WebElement emailtextBox;
 
-    ////Homepage>> LoginLink>> Password Text Box // ayse
+    //Homepage>> LoginLink>> Password Text Box // ayse
     @FindBy(xpath = "//input[@id='password']")
     public WebElement passwordTextBox;
 
@@ -28,9 +28,15 @@ public class HomePage {
    @FindBy(xpath = "//button[@class='btn btn-primary']")
    public WebElement loginButonu;
 
-    //Homepage>> LoginLink>> Dashboard
-   @FindBy (className = "nav-link p-0 active")
-    public WebElement dashboardHeardText;
+    //Homepage>> Dashboard
+    @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+    public WebElement dashboardHearderText;
+
+    //Homepage>> LoginLink>> Basarısız Giris Texti
+    @FindBy(xpath = "//span[text()='These credentials do not match our records.']")
+    public WebElement basarisizGirisTexti;
+
+
 
 
 
