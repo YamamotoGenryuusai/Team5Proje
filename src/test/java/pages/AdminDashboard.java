@@ -20,7 +20,7 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Users']")
     public WebElement usersElementi;
 
-   //Admin Dashboard >> Menü >> Withdraw Transactions
+    //Admin Dashboard >> Menü >> Withdraw Transactions
     @FindBy (xpath = "//span[text()='Withdraw Transactions']")
     public WebElement paraCekmeIslemleriElementiANT;
 
@@ -97,32 +97,7 @@ public class AdminDashboard {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Ozgur
+    //Ozgur
 
 
 

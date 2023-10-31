@@ -10,16 +10,6 @@ public class UserDashboard extends AdminDashboard{
     public UserDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);}
 
-}
-
-
-
-
-
-
-
-
-
 
 
 
