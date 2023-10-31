@@ -14,6 +14,15 @@ public class AdminDashboard {
     @FindBy(xpath = "(//span[@class='aside-menu-title'])[12]")
     public WebElement paraBirimleriElementi;
 
+
+
+
+
+    //Admin Dashboard >> Menü >> Users
+    @FindBy(xpath = "//span[text()='Users']")
+    public WebElement usersElementi;
+
+
    //Admin Dashboard >> Menü >> Withdraw Transactions
     @FindBy (xpath = "//span[text()='Withdraw Transactions']")
     public WebElement paraCekmeIslemleriElementiANT;

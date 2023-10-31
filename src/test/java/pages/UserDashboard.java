@@ -5,10 +5,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+public class UserDashboard extends AdminDashboard {
 
-public class UserDashboard {
-    public UserDashboard(){
-        PageFactory.initElements(Driver.getDriver(),this);}
+    public UserDashboard() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+}
+
+
+
 
 
 
@@ -1007,4 +1013,4 @@ public class UserDashboard {
 
 //Ozan
 
-}
+
