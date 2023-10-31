@@ -998,4 +998,20 @@ public class HomePage extends UserDashboard{
 
 
 //Ozan
+    //Homepage Get Started butonu
+    @FindBy(xpath = "//a[@class='btn btn-orange ']")
+    public WebElement getStartedButton;
+    //Home page standart Choose Plan butonu
+    @FindBy(xpath = "//a[@data-id='1']")
+    public WebElement choosePlan10;
+    //Home page Choose plan bölümündeki Standart yazı elementi
+    @FindBy(xpath = "(//h3[@class='mb-1 mt-3 fw-6'])[5]")
+    public WebElement chosePlanStandardText;
+    //Home page Choose plan bölümündeki Gold yazi elementi
+    @FindBy(xpath = "(//h3[@class='mb-1 mt-3 fw-6'])[7]")
+    public  WebElement choosePlanGoldText;
+    //Home page Choose plan seçenek kaydırma butonu
+    @FindBy(xpath = "//button[@class='slick-next slick-arrow']")
+    public WebElement choosePlanKaydirma;
+
 }

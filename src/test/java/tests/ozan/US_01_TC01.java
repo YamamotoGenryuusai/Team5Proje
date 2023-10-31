@@ -1,4 +1,4 @@
-package tests.US_001_003_009;
+package tests.ozan;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,16 +10,16 @@ public class US_01_TC01 extends TestBaseRapor {
 
     //Bir ziyaretçi olarak siteyi kullanabilmek icin web sitesine erişebildiğimi doğrulayabilmeliyim
     @Test
-    public void TC01(){
+    public void test01(){
         extentTest=extentReports.createTest("Website home page accessibility test.","The user should be able to access the main page of the site.");
-        //Browser açılır
+        extentTest.info("The browser opens and the user navigates to the url.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
-        //Web sitesine erişilebildiginin kontrolu yapılır.
+        extentTest.info("It is checked that the website can be accessed.");
         String expectedUrl="https://qa.smartcardlink.com/";
         String actualUrl=Driver.getDriver().getCurrentUrl();
         Assert.assertEquals(actualUrl,expectedUrl,"Site home page could not be accessed.");
-        extentTest.info("Tests that the site url is correct.");
         extentTest.pass("Access to the main page can be provided.");
+        extentTest.info("Browser is closed.");
 
 
 
