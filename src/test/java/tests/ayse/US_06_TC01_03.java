@@ -8,7 +8,11 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+
+
 public class US_06_TC01_03 {
+
+    HomePage homePage=new HomePage();
 
     //TC_01: Kullanıcı anasayfada Sıgn In butonunu görebilmeli ve tıkladığında sayfaya erişebilmelidir.
     @Test
@@ -18,7 +22,6 @@ public class US_06_TC01_03 {
         ReusableMethods.wait(2);
 
         //02-Sign In butonu gorunurlugu dogrulanir.
-        HomePage homePage=new HomePage();
         Assert.assertTrue(homePage.signInButton.isDisplayed());
 
         //03-Sign In butonuna tiklanir.
@@ -40,7 +43,6 @@ public class US_06_TC01_03 {
         ReusableMethods.wait(2);
 
         //02-Sign In butonuna tiklanir.
-        HomePage homePage=new HomePage();
         homePage.signInButton.click();
 
         //03-Login sayfasında email kutucugu görünürlüğü dogrulanir.
@@ -66,7 +68,6 @@ public class US_06_TC01_03 {
         ReusableMethods.wait(2);
 
         //02-Sign In butonuna tiklanir.
-        HomePage homePage=new HomePage();
         homePage.signInButton.click();
 
         //03-Login sayfasında kullanici emaili olarak gecerli email girilir.
@@ -77,7 +78,7 @@ public class US_06_TC01_03 {
 
         //05-Login butonuna basarak basarili bir sekilde login oldugu dogrulanir.
         homePage.loginButonu.click();
-        Assert.assertTrue(homePage.dashboardHearderText.isDisplayed());
+        Assert.assertTrue(homePage.dashboardHearderTextANT.isDisplayed());
 
         //06-Browser kapatilir.
         Driver.closeDriver();
@@ -93,7 +94,6 @@ public class US_06_TC01_03 {
         ReusableMethods.wait(2);
 
         //02-Sign In butonuna tiklanir.
-        HomePage homePage=new HomePage();
         homePage.signInButton.click();
 
         //03-Login sayfasında kullanici emaili olarak gecersiz email girilir.
@@ -104,7 +104,7 @@ public class US_06_TC01_03 {
 
         //05-Login butonuna basarak basarili bir sekilde login olamadıgı dogrulanir.
         homePage.loginButonu.click();
-        Assert.assertTrue(homePage.basarisizGirisTexti.isDisplayed());
+        Assert.assertTrue(homePage.basarisizGirisTextiANT.isDisplayed());
 
         //06-Browser kapatilir.
         Driver.closeDriver();

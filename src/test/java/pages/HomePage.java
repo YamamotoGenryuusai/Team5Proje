@@ -30,11 +30,11 @@ public class HomePage extends UserDashboard{
 
     //Homepage>> Dashboard
     @FindBy(xpath = "//a[@class='nav-link p-0 active']")
-    public WebElement dashboardHearderText;
+    public WebElement dashboardHearderTextANT;
 
     //Homepage>> LoginLink>> Basarısız Giris Texti
     @FindBy(xpath = "//span[text()='These credentials do not match our records.']")
-    public WebElement basarisizGirisTexti;
+    public WebElement basarisizGirisTextiANT;
 
 
 
