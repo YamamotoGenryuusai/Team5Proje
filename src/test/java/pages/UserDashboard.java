@@ -6,13 +6,13 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 
-public class UserDashboard {
+public class UserDashboard extends AdminDashboard{
     public UserDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);}
 
+}
 
 
-public class UserDashboard extends AdminDashboard{
 
 
 
