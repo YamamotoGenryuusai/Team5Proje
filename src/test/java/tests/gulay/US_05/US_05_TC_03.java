@@ -1,6 +1,7 @@
 package tests.gulay.US_05;
 
 import com.github.javafaker.Faker;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.ConfigReader;
@@ -36,6 +37,11 @@ public class US_05_TC_03 {
         homePage.cABySigningUpgg.click();
         // 11-	Submit butonu tıklanır.
         homePage.cASubmitButonugg.click();
+        //12-	Sign in yazısının göründüğünü doğrulanır
+        // "You have registered successfully" mesajı cok kısa surede kayboldugu icin
+        // basarili giris yapidiginda yonlend,rd,g, sayfadan "Sign In" textinin goruntulendigi test edildi
+        Assert.assertTrue(homePage.basarliCreatAccountSignInText_gg.isDisplayed());
+
 
 
 

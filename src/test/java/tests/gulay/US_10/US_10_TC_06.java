@@ -1,17 +1,18 @@
 package tests.gulay.US_10;
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_10_TC_02 {
+public class US_10_TC_06 {
+    SoftAssert softAssert= new SoftAssert();
 
 @Test
 
-    public void US10_TC_02 (){
-
+    public void US_10_TC_06 (){
 
     //1-	Browser acilir
     //2-	Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir.
@@ -39,16 +40,13 @@ public class US_10_TC_02 {
 
     homePage.adminEnquiriesText_gg.click();
 
-    //8-	Enquries sayfasına gidildiği doğrulanır.
-    homePage.enquiriesSayfasiEnquiriesText.isDisplayed();
+    // 8-	Enquries sayfasında view ikonuna tıklanır
+    homePage.enquiriesSayfasiViewIkonu_gg.click();
+
+    // 8-	Phone yazisinin goruntulendigini dogrular
+    softAssert.assertTrue(homePage.enquiriesDetailsPhone_gg.isDisplayed());
 
     Driver.closeDriver();
 
-
-
-
-
-
 }
-
 }
