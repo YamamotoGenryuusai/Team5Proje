@@ -698,27 +698,27 @@ public class HomePage extends UserDashboard {
 
 
     //Tugce
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Admin HomePage >> Signin Butonu
+    @FindBy(xpath = "//*[@class = 'btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement adminSigninButonu;
+    // Admin HomePage >> Admin Email Box
+    @FindBy(id = "email")
+    public WebElement adminEmailBox;
+    // Admin HomePage >> Admin Email Box
+    @FindBy(id = "password")
+    public WebElement adminPasswordBox;
+    // Admin HomePage >> Admin Login Butonu
+    @FindBy(xpath = "//*[@type = 'submit']")
+    public WebElement adminLoginButonu;
+    // Admin HomePage >> Admin user name
+    @FindBy(xpath = "//*[text()='admin13 admin']")
+    public WebElement adminUserName;
+    // Admin kullanici dropdown sekmesi
+    @FindBy(id="dropdownMenuButton1")
+    public WebElement adminKullaniciDropDown;
+    // Admin HomePage >> Admin dashboard butonu
+    @FindBy(xpath = "//*[@class='nav-link p-0 active']")
+    public WebElement dashboardButonu;
 
 
 
