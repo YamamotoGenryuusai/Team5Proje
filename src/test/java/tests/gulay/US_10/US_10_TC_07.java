@@ -7,10 +7,12 @@ import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_10_TC_04 {
+public class US_10_TC_07 {
+
     SoftAssert softAssert= new SoftAssert();
+
     @Test
-    public void US_10_TC_04 (){
+    public void US_10_TC_07 (){
 
         //1-	Browser acilir
         //2-	Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir.
@@ -41,11 +43,9 @@ public class US_10_TC_04 {
         // 8-	Enquries sayfasında view ikonuna tıklanır
         homePage.enquiriesSayfasiViewIkonu_gg.click();
 
-     // 8-	Name yazisinin goruntulendigini dogrular
-        softAssert.assertTrue(homePage.enquiriesDetailsName_gg.isDisplayed());
+        // 8-	Message yazisinin goruntulendigini dogrular
+        softAssert.assertTrue(homePage.enquiriesDetailsMessage_gg.isDisplayed());
 
-    Driver.closeDriver();
-
-
+         Driver.closeDriver();
     }
 }

@@ -697,28 +697,28 @@ public class AdminDashboard {
 
 
 
-//Tugce
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Tugce
+    // Admin dashboard >> Affiliate Users sekmesi
+    @FindBy(xpath = "//*[text()='Affiliate Users']")
+    public WebElement affiliateUsersSekmesi;
+    @FindBy(xpath = "//*[@class='nav-link p-0 active']")
+    public WebElement affiliateUserYaziElementi;
+    @FindBy(xpath = "//*[text()='Affiliated By']")
+    public WebElement affiliatedByBaslikElementi;
+    @FindBy(id="perPage")
+    public WebElement perPageItemi;
+    @FindBy(xpath = "//*[text()='User']")
+    public WebElement userBaslikElementi;
+    @FindBy(xpath = "//*[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement affiliateBySonuc;
+    @FindBy(xpath = "//*[text()='Affiliation Amount']")
+    public WebElement affiliationAmountBaslikElementi;
+    @FindBy(xpath = "//*[text()='Date']")
+    public WebElement affiliationDateBaslikElementi;
+    @FindBy(xpath = "//*[text()='Affiliation Transactions']")
+    public WebElement affiliationTransactionsSekmesi;
+    @FindBy(xpath = "//*[@class='nav-link p-0 active']")
+    public WebElement affiliationTransactionsYaziElementi;
 
 
 

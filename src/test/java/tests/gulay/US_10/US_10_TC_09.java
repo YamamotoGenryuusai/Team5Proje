@@ -6,11 +6,13 @@ import pages.HomePage;
 import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
-public class US_10_TC_04 {
+public class US_10_TC_09 {
     SoftAssert softAssert= new SoftAssert();
     @Test
-    public void US_10_TC_04 (){
+    public void US_10_09 () {
+
 
         //1-	Browser acilir
         //2-	Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir.
@@ -38,14 +40,19 @@ public class US_10_TC_04 {
 
         homePage.adminEnquiriesText_gg.click();
 
-        // 8-	Enquries sayfasında view ikonuna tıklanır
-        homePage.enquiriesSayfasiViewIkonu_gg.click();
+        // 8-	Enquries sayfasında delete ikonuna tıklanır
+        homePage.enquiriesSayfasiDeleteIkonu_gg.click();
 
-     // 8-	Name yazisinin goruntulendigini dogrular
-        softAssert.assertTrue(homePage.enquiriesDetailsName_gg.isDisplayed());
+        ReusableMethods.wait(1);
+        //9- Yes Delete Butonuna tiklar
+        homePage.deletePenceresiYesDeleteButonu.click();
 
-    Driver.closeDriver();
+        //10- Mesajın silindigini dogrular
 
+        softAssert.assertTrue(homePage.deletePenceresiYesDeleteButonu.isDisplayed());
+        Driver.closeDriver();
 
     }
+
+
 }
