@@ -470,8 +470,8 @@ public class HomePage extends UserDashboard {
  @FindBy(xpath = "//button[text()='Yes, Delete!']")
  public WebElement deletePenceresiYesDeleteButonu;
   
-  @FindBy (xpath = "//h1[@class='text-center mb-7']")
-    public  WebElement basarliCreatAccountSignInText_gg;
+
+
 
 
 
