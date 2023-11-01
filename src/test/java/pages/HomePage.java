@@ -98,55 +98,53 @@ public class HomePage extends UserDashboard {
 
 
   //Ozgur
+    @FindBy(xpath = "//*[text()=\"Plans\"]")
+    public WebElement planSekmesi;
 
+    @FindBy(xpath = "//a[@class='btn btn-primary ms-auto']")
+    public WebElement newPlanSekmesi;
 
+    @FindBy(xpath = "//a[@title='Delete'][1]")
+    public WebElement deleteButton;
 
+    @FindBy(xpath = "//button[@class='swal-button swal-button--confirm']")
+    public WebElement deleteYesButton;
 
+    @FindBy(xpath = "//tbody/tr[1]/td[1]")
+    public WebElement uyelikPlani;
 
+    @FindBy(xpath = "//*[@id=\"name\"]")
+    public WebElement nameTextbox;
 
+    @FindBy (xpath = "//*[@id=\"price\"]")
+    public WebElement priceTextbox;
 
+    @FindBy(xpath = "//*[@id=\"no_of_vcards\"]")
+    public WebElement vcardTextbox;
 
+    @FindBy(xpath = "//*[@id=\"trial_days\"]")
+    public WebElement trialdaysTextbox;
 
+    @FindBy(xpath = "//*[@id=\"select2-frequency-container\"]")
+    public WebElement frequencyDropdown;
 
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement dropDownSearchBox;
 
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement dropDownCurrencysearchbox;
 
+    @FindBy(xpath = "//*[@id=\"select2-currency_id-container\"]")
+    public WebElement dropDownCurrency;
 
+    @FindBy(xpath = "//*[@alt='Template 1'][1]")
+    public WebElement template;
 
+    @FindBy(xpath = "//*[@id=\"featureAll\"]")
+    public WebElement checkbox1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@id=\"planFormSubmit\"]")
+    public WebElement saveButton;
 
 
 
