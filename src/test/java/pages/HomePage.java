@@ -1013,5 +1013,29 @@ public class HomePage extends UserDashboard {
     //Home page Choose plan seçenek kaydırma butonu
     @FindBy(xpath = "//button[@class='slick-next slick-arrow']")
     public WebElement choosePlanKaydirma;
+    //Home page Contact Us bölümü mail adresi
+    @FindBy(xpath = "//a[@class='text-decoration-none text-secondary contact-info__contact-label']")
+    public WebElement contactUsMailText;
+    //Home page Contact Us yazisi locate
+    @FindBy(xpath = "//h2[@class='heading text-success text-center margin-b-80px mb-5']")
+    public WebElement contactUsText;
+    //Home page Contact Us bölümü telefon yazısı
+    @FindBy(xpath = "//a[text()='+1 987-654-3210']")
+    public WebElement contactUsPhoneText;
+    //Home page Contact Us bölümü name textbox'ı
+    @FindBy(xpath = "//input[@id='name']")
+    public WebElement homePageNameTextbox;
+    //Home page Contact Us bölümü email textbox'ı
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement homePageEmailTextBox;
+    //Home page Contact Us bölümü subject textbox'ı
+    @FindBy(xpath = "//input[@id='subject']")
+    public WebElement homePageSubjectTextBox;
+    //Home page Contact Us bölümü Message textbox'ı
+    @FindBy(xpath = "//textarea[@id='message']")
+    public WebElement homePageMessageTextBox;
+    //Home page Contact Us bölümü Send Message Butonu
+    @FindBy(xpath = "//input[@id='submit']")
+    public WebElement homePageSubmitButton;
 
 }

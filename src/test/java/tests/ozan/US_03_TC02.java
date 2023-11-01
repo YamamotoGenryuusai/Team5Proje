@@ -8,39 +8,42 @@ import utilities.*;
 public class US_03_TC02 extends TestBaseRapor {
     @Test
     public void test01() {
-        extentTest = extentReports.createTest("Home page Choose plan visibility and activity test.");
+        extentTest = extentReports.createTest("Ana sayfa Choose Plan butonu testi","Choose Plan butonu aktif,görünür ve ilgili sayfaya yönlendirmelidir.");
         HomePage homePage = new HomePage();
         SoftAssert softAssert = new SoftAssert();
+        extentTest.info("Site ana sayfasına gider.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
+        extentTest.info("Choose Plan bölümüne gelinir");
         JSUtilities.scrollToElement(Driver.getDriver(), homePage.choosePlan10);
-        extentTest.info("The visibility of the Choose Plan button is tested.");
-        softAssert.assertTrue(homePage.choosePlan10.isDisplayed(), "The Choose Plan button is not visible");
-        extentTest.pass("The Choose Plan button visible.");
+        ReusableMethods.wait(1);
+        extentTest.info("Choose paln butonunun gürünülürlüğünü test eder.");
+        softAssert.assertTrue(homePage.choosePlan10.isDisplayed(), "Choose Plan butonu görünür değil.");
+        extentTest.pass("Choose Plan butonu görünür.");
         ReusableMethods.wait(1);
         homePage.choosePlan10.click();
         ReusableMethods.wait(1);
+        extentTest.info("Tıklandığında ilgili sayfaya yönlendirir.");
         String expectedUrl = "https://qa.smartcardlink.com/login";
         String actualUrl = Driver.getDriver().getCurrentUrl();
-        softAssert.assertTrue(actualUrl.contains(expectedUrl), "It does not redirect to the relevant page.");
+        softAssert.assertTrue(actualUrl.contains(expectedUrl), "Choose Plan butonu doğru sayfaya yönlendirmiyor.");
 
-        extentTest.pass("The Choose Plan button is visible, active and redirects to the relevant page.");
+        extentTest.pass("Choose Plan butonu görünür,aktif ve ilgili sayfaya yönlendirir.");
     }
     @Test
     public void test02(){
-        extentTest=extentReports.createTest("Activation test of the plan scroll buttons in the Home page Choose plan section.","The plan scroll keys in the Choose plan section must be active");
+        extentTest=extentReports.createTest("Plan seçim tuş testi","Plan seçim tusları görünür ve aktif olmalıdır.");
         HomePage homePage=new HomePage();
         SoftAssert softAssert=new SoftAssert();
-        extentTest.info("Open the browser and go to the home page.");
+        extentTest.info("Tarayıcı açılır site ana sayfasına gidilir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
-        extentTest.info("Go to choose plan section in home page.");
+        extentTest.info("Ana sayfa Choose plan bölümüne kadar gelinir.");
         JSUtilities.scrollToElement(Driver.getDriver(),homePage.chosePlanStandardText);
-        extentTest.info("Tests that the plan scroll key works.");
-        extentTest.info("Click on the plan shift button.");
-        ReusableMethods.wait(1);
+        extentTest.info("Plan seçim butonu testleri yapılır.");
         homePage.choosePlanKaydirma.click();
         ReusableMethods.wait(1);
         softAssert.assertTrue(homePage.choosePlanGoldText.isDisplayed());
-        extentTest.pass("Plan scroll key works");
+        extentTest.pass("Plan kaydırma butonu görünür ve aktiftir.");
         softAssert.assertAll();
+        extentTest.info("Tarayıcı kapatılır.");
     }
 }
