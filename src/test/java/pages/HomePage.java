@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class HomePage extends UserDashboard{
+public class HomePage extends UserDashboard {
     public HomePage(){PageFactory.initElements(Driver.getDriver(),this);}
 
    // Header/Features Link
@@ -30,11 +30,11 @@ public class HomePage extends UserDashboard{
 
     //Homepage>> Dashboard
     @FindBy(xpath = "//a[@class='nav-link p-0 active']")
-    public WebElement dashboardHearderText;
+    public WebElement dashboardHearderTextANT;
 
     //Homepage>> LoginLink>> Basarısız Giris Texti
     @FindBy(xpath = "//span[text()='These credentials do not match our records.']")
-    public WebElement basarisizGirisTexti;
+    public WebElement basarisizGirisTextiANT;
 
 
 
@@ -98,55 +98,53 @@ public class HomePage extends UserDashboard{
 
 
   //Ozgur
+    @FindBy(xpath = "//*[text()=\"Plans\"]")
+    public WebElement planSekmesi;
 
+    @FindBy(xpath = "//a[@class='btn btn-primary ms-auto']")
+    public WebElement newPlanSekmesi;
 
+    @FindBy(xpath = "//a[@title='Delete'][1]")
+    public WebElement deleteButton;
 
+    @FindBy(xpath = "//button[@class='swal-button swal-button--confirm']")
+    public WebElement deleteYesButton;
 
+    @FindBy(xpath = "//tbody/tr[1]/td[1]")
+    public WebElement uyelikPlani;
 
+    @FindBy(xpath = "//*[@id=\"name\"]")
+    public WebElement nameTextbox;
 
+    @FindBy (xpath = "//*[@id=\"price\"]")
+    public WebElement priceTextbox;
 
+    @FindBy(xpath = "//*[@id=\"no_of_vcards\"]")
+    public WebElement vcardTextbox;
 
+    @FindBy(xpath = "//*[@id=\"trial_days\"]")
+    public WebElement trialdaysTextbox;
 
+    @FindBy(xpath = "//*[@id=\"select2-frequency-container\"]")
+    public WebElement frequencyDropdown;
 
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement dropDownSearchBox;
 
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement dropDownCurrencysearchbox;
 
+    @FindBy(xpath = "//*[@id=\"select2-currency_id-container\"]")
+    public WebElement dropDownCurrency;
 
+    @FindBy(xpath = "//*[@alt='Template 1'][1]")
+    public WebElement template;
 
+    @FindBy(xpath = "//*[@id=\"featureAll\"]")
+    public WebElement checkbox1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@id=\"planFormSubmit\"]")
+    public WebElement saveButton;
 
 
 
@@ -397,7 +395,9 @@ public class HomePage extends UserDashboard{
 
 
 
-    //Gulay
+    
+  
+  //Gulay
     // Homepage >> Log in sayfasında Create an account link // Gulay
     @FindBy (xpath = "//a[@href='https://qa.smartcardlink.com/register']" )
     public WebElement createAnAccountLinkgg;
@@ -426,6 +426,7 @@ public class HomePage extends UserDashboard{
     // Home page >> Create an Account >> Submit Butonu // Gulay
     @FindBy(xpath = "//button[@type='submit'] ")
     public WebElement cASubmitButonugg;
+
    @FindBy (xpath = "//h1[@class='text-center mb-7']")
    public  WebElement basarliCreatAccountSignInText_gg;
  @FindBy(xpath = "//a[@class='nav-link p-0 active']")
@@ -468,6 +469,9 @@ public class HomePage extends UserDashboard{
  // Home page >> Enquiries >> Delete Penceresi >> Yes Delete Butonu
  @FindBy(xpath = "//button[text()='Yes, Delete!']")
  public WebElement deletePenceresiYesDeleteButonu;
+  
+  @FindBy (xpath = "//h1[@class='text-center mb-7']")
+    public  WebElement basarliCreatAccountSignInText_gg;
 
 
 
@@ -492,23 +496,8 @@ public class HomePage extends UserDashboard{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- //Hakan
+ 
+  //Hakan
 
 
 
@@ -709,27 +698,27 @@ public class HomePage extends UserDashboard{
 
 
     //Tugce
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Admin HomePage >> Signin Butonu
+    @FindBy(xpath = "//*[@class = 'btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement adminSigninButonu;
+    // Admin HomePage >> Admin Email Box
+    @FindBy(id = "email")
+    public WebElement adminEmailBox;
+    // Admin HomePage >> Admin Email Box
+    @FindBy(id = "password")
+    public WebElement adminPasswordBox;
+    // Admin HomePage >> Admin Login Butonu
+    @FindBy(xpath = "//*[@type = 'submit']")
+    public WebElement adminLoginButonu;
+    // Admin HomePage >> Admin user name
+    @FindBy(xpath = "//*[text()='admin13 admin']")
+    public WebElement adminUserName;
+    // Admin kullanici dropdown sekmesi
+    @FindBy(id="dropdownMenuButton1")
+    public WebElement adminKullaniciDropDown;
+    // Admin HomePage >> Admin dashboard butonu
+    @FindBy(xpath = "//*[@class='nav-link p-0 active']")
+    public WebElement dashboardButonu;
 
 
 
@@ -1009,4 +998,44 @@ public class HomePage extends UserDashboard{
 
 
 //Ozan
+    //Homepage Get Started butonu
+    @FindBy(xpath = "//a[@class='btn btn-orange ']")
+    public WebElement getStartedButton;
+    //Home page standart Choose Plan butonu
+    @FindBy(xpath = "//a[@data-id='1']")
+    public WebElement choosePlan10;
+    //Home page Choose plan bölümündeki Standart yazı elementi
+    @FindBy(xpath = "(//h3[@class='mb-1 mt-3 fw-6'])[5]")
+    public WebElement chosePlanStandardText;
+    //Home page Choose plan bölümündeki Gold yazi elementi
+    @FindBy(xpath = "(//h3[@class='mb-1 mt-3 fw-6'])[7]")
+    public  WebElement choosePlanGoldText;
+    //Home page Choose plan seçenek kaydırma butonu
+    @FindBy(xpath = "//button[@class='slick-next slick-arrow']")
+    public WebElement choosePlanKaydirma;
+    //Home page Contact Us bölümü mail adresi
+    @FindBy(xpath = "//a[@class='text-decoration-none text-secondary contact-info__contact-label']")
+    public WebElement contactUsMailText;
+    //Home page Contact Us yazisi locate
+    @FindBy(xpath = "//h2[@class='heading text-success text-center margin-b-80px mb-5']")
+    public WebElement contactUsText;
+    //Home page Contact Us bölümü telefon yazısı
+    @FindBy(xpath = "//a[text()='+1 987-654-3210']")
+    public WebElement contactUsPhoneText;
+    //Home page Contact Us bölümü name textbox'ı
+    @FindBy(xpath = "//input[@id='name']")
+    public WebElement homePageNameTextbox;
+    //Home page Contact Us bölümü email textbox'ı
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement homePageEmailTextBox;
+    //Home page Contact Us bölümü subject textbox'ı
+    @FindBy(xpath = "//input[@id='subject']")
+    public WebElement homePageSubjectTextBox;
+    //Home page Contact Us bölümü Message textbox'ı
+    @FindBy(xpath = "//textarea[@id='message']")
+    public WebElement homePageMessageTextBox;
+    //Home page Contact Us bölümü Send Message Butonu
+    @FindBy(xpath = "//input[@id='submit']")
+    public WebElement homePageSubmitButton;
+
 }
