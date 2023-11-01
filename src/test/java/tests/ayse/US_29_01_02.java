@@ -2,14 +2,13 @@ package tests.ayse;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import pages.AdminDashboard;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US_29 {
+public class US_29_01_02 {
     HomePage homePage = new HomePage();
     AdminDashboard adminDashboard = new AdminDashboard();
 
