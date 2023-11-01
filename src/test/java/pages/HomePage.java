@@ -470,8 +470,8 @@ public class HomePage extends UserDashboard {
  @FindBy(xpath = "//button[text()='Yes, Delete!']")
  public WebElement deletePenceresiYesDeleteButonu;
   
-  @FindBy (xpath = "//h1[@class='text-center mb-7']")
-    public  WebElement basarliCreatAccountSignInText_gg;
+
+
 
 
 
@@ -599,65 +599,65 @@ public class HomePage extends UserDashboard {
 
     //Hasan
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "//div[text()=' © 2023 Copyright by ']")
+    public WebElement CopyrightElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "//a[@title='Facebook']")
+    public WebElement facebookElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "//a[@title='Twitter']")
+    public WebElement xElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "//a[@title='Instagram']")
+    public WebElement instagramElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "//a[@title='Linkedin']")
+    public WebElement linkedinElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "//a[@title='Pinterest']")
+    public WebElement pinterestElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "(//a[@class='text-decoration-none link-info fs-6'])[1]")
+    public WebElement termsConditonsElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "(//a[@class='text-decoration-none link-info fs-6'])[2]")
+    public WebElement privacyPolicyElementHC;
 
+    //Anasayfa>>footer
+    @FindBy(xpath = "(//a[@class='text-decoration-none link-info fs-6'])[3]")
+    public WebElement faqElementHC;
 
+    //Homepage SignIn Button
+    @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement signInButtonHC;
 
+    //Homepage>> LoginLink>> Email Text Box
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement emailTextBoxHC;
 
+    //Homepage>> LoginLink>> Password Text Box
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement passwordTextBoxHC;
 
+    //Homepage>> LoginLink>> Logın Butonu
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement loginButtonHC;
 
+    //Anasayfa>>Sıgn In>>Users
+    @FindBy(xpath = "//span[text()='Users']")
+    public WebElement adminUsersElementHC;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Anasayfa>>Sıgn In>>Users
+    @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+    public WebElement usersDogrulamaElementHC;
 
 
 
