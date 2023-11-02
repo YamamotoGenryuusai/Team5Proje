@@ -1,6 +1,5 @@
 package tests.ozgur;
 
-import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.ConfigReader;
@@ -8,9 +7,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-import java.util.Locale;
-
-public class US_019_003 extends TestBaseRapor {
+public class US_025_003 extends TestBaseRapor {
 
     @Test
     public void test_3() {

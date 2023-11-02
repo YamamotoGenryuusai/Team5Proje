@@ -6,7 +6,7 @@ import pages.HomePage;
 import utilities.*;
 
 
-public class US_019 extends TestBaseRapor{
+public class US_025_001 extends TestBaseRapor{
 
 
     @Test
