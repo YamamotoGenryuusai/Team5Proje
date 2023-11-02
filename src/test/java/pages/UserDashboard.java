@@ -95,8 +95,6 @@ public class UserDashboard extends AdminDashboard {
 
 
 
-
-
     //Ozgur
 
 
@@ -295,6 +293,8 @@ public class UserDashboard extends AdminDashboard {
 
 
 
+
+
     //Taha
 //anasayfa header bölümü Kullanici profili dropdown menüsü
     @FindBy(xpath = "//button[@id='dropdownMenuButton1']")
@@ -355,41 +355,41 @@ public class UserDashboard extends AdminDashboard {
     @FindBy(xpath = "(//h5[@class='modal-title'])[2] ")
     public WebElement SendEmailText;
 //kullanıcı profılı dropdownmenü
-
-@FindBy(xpath = "(//a[@class='dropdown-item text-gray-900'])[2] ")
+    @FindBy(xpath = "(//a[@class='dropdown-item text-gray-900'])[2] ")
 public WebElement ManageSubscriptionbutton;
-
 @FindBy(xpath = "//a[@class='nav-link p-0 active']")
 public WebElement Dashboardtext;
+//Affiliations butonu
+@FindBy(xpath = "//button[@id='affiliation-tab']")
+public WebElement affilitionmenübutton;
+    //Affiliations> Total Affiliation Amount>
+@FindBy(xpath = "(//h2[@class='fw-bolder text-white'])[1]")
+    public WebElement totalAffilitionAmountElement;
+
+@FindBy(xpath = "(//h2[@class='fw-bolder text-white'])[1]")
+    public WebElement currentamountelementi;
+   // affiliations> send ınvıte butonu> email adress elementi
+@FindBy(xpath = "//input[@id='email']")
+    public WebElement emailadresselementi;
+    //affiliations> send ınvıte butonu>Send Email butonu
+    @FindBy(xpath = "//button[@class='btn btn-primary sendmailbtn']")
+public WebElement sendemailbuttonu;
+
+    //affiliations>withdrawal
+    @FindBy(xpath = "//button[@id='withdrawal-tab']")
+    public WebElement withdrawal;
+    //Affiliations > Withdrawalbutonu>Withdraw Amountbutonu>
+    @FindBy(xpath = "//a[@class='btn btn-primary']")
+    public WebElement withdrawAmountbutton;
+    @FindBy(xpath = "//input[@id='withdrawAmount']")
+    public WebElement amounttext;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Withdraw Amount>verify  Email =
+    @FindBy(xpath = "//input[@id='paypalEmail']")
+    public WebElement paypalEmail;
+    @FindBy(xpath = "(//button[@class='btn btn-primary'])[2]")
+    public WebElement savebutonu;
 
 
 

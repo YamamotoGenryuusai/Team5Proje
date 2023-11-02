@@ -299,46 +299,46 @@ public class AdminDashboard {
 
 //Taha
 
+    //Dashboard> total active users element
+@FindBy(xpath = "//div[@class='bg-cyan-300 widget-icon rounded-10 d-flex align-items-center justify-content-center']")
+public WebElement totalactiveuserselement;
+    //Dashboard> total deactive users element
+@FindBy(xpath = "//div[@class='bg-info shadow-md rounded-10 p-xxl-10 px-7 py-10 d-flex align-items-center justify-content-between my-3']")
+ public WebElement totaldeactiveuserselement;
+    //Dashboard> total active VCards element
+@FindBy(xpath = "//div[@class='bg-success shadow-md rounded-10 p-xxl-10 px-7 py-10 d-flex align-items-center justify-content-between my-3']")
+ public WebElement totalactiveVCardselement;
+
+// Dashboard> total deactive VCards element
+ @FindBy(xpath = "//div[@class='bg-warning shadow-md rounded-10 p-xxl-10 px-7 py-10 d-flex align-items-center justify-content-between my-3']")
+ public WebElement totaldeactiveVCardselement;
+
+ //Dashboard> Plan by Users tablo elementi
+ @FindBy(xpath = "//canvas[@id='dashboardPlanPieChart']")
+ public WebElement PlanbyUserstabloelementi;
+
+
+ //Dashboard> ıncome elementi
+ @FindBy(xpath = "//canvas[@id='dashboardIncomeChart']")
+ public WebElement ıncomeelementi;
+
+
+ //Dashboard>Recent Users Registration> day
+ @FindBy(xpath = "//button[@id='overview-tab']")
+ public WebElement day;
+
+
+ // Dashboard>Recent Users Registration> week
+ @FindBy(xpath = "//button[@id='vweekData']")
+ public WebElement week;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ // Dashboard>Recent Users Registration> month
+ @FindBy(xpath = "//button[@id='monthData']")
+ public WebElement month;
+ @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+    public WebElement adminDeshboardtext;
 
 
 
