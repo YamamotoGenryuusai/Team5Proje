@@ -197,15 +197,15 @@ public class UserDashboard extends AdminDashboard {
 
 
 
-
-
     //Cemil
 
+    //Homepage>> Login >> Dashboard >> Vcard ||
+    @FindBy(xpath = "(//span[@class='aside-menu-title'])[2]")
+    public WebElement dashboardVcardButonu;
 
-
-
-
-
+    //Homepage>> Login >> Dashboard >> Total Active Vcard ||
+    @FindBy(xpath = "//div[@class='text-end text-white'][1]")
+    public WebElement dashboardPageElement1;
 
 
 
@@ -398,9 +398,6 @@ public WebElement Dashboardtext;
 
 
     //Gulay
-
-
-
 
 
 

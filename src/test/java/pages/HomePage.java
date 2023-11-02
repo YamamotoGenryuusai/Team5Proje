@@ -195,59 +195,61 @@ public class HomePage extends UserDashboard {
 
 
 
+
+
     //Cemil
 
+    //Homepage>> LoginLink>> Logın Butonu // Profile Page
+    @FindBy(xpath ="//button[@id='dropdownMenuButton1']")
+    public WebElement profilPageCO;
 
+    // Profile Page //Account Settings//Displayed
+    @FindBy(xpath ="//a[@class='dropdown-item text-gray-900'][1]")
+    public WebElement changeProfilButtonCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Full Name Row
+    @FindBy(xpath ="//input[@id='editProfileFirstName']")
+    public WebElement editNameBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Full NameRow
+    @FindBy(xpath ="//input[@id='editProfileLastName']")
+    public WebElement editLastNameBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//e-mail
+    @FindBy(xpath ="//input[@id='isEmailEditProfile']")
+    public WebElement editMailBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Phone Number
+    @FindBy(xpath ="//input[@id='phoneNumber']")
+    public WebElement editPhoneBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Phone Number
+    @FindBy(xpath ="//input[@type='submit' and @value='Save' and contains(@class, 'btn-primary')]")
+    public WebElement saveButtonCO;
 
+    // Profile Page //Account Settings//ChangePassword
+    @FindBy(xpath ="//*[@id='changePassword']")
+    public WebElement changePasswordCO;
 
+    // Profile Page //Account Settings//Change Password
+    @FindBy(xpath ="//input[@id='current_password']")
+    public WebElement currentPasswordCO;
 
+    // Profile Page //Account Settings//New Password
+    @FindBy(xpath ="//input[@id='new_password']")
+    public WebElement newPasswordCO;
 
+    // Profile Page //Account Settings//Confirm Password
+    @FindBy(xpath ="//input[@id='confirm_password']")
+    public WebElement confirmPasswordCO;
 
+    // Profile Page //Account Settings//Confirm Password
+    @FindBy(xpath ="//button[@id='passwordChangeBtn']")
+    public WebElement savePasswordChangeButtonCO;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Profile Page //Account Settings//Confirm Password
+    @FindBy(xpath ="//span[@id='select2-selectLanguage-container']")
+    public WebElement selectLanguageBoxCO;
 
 
 
@@ -296,8 +298,6 @@ public class HomePage extends UserDashboard {
 
 
     //Taha
-
-
 
 
 
