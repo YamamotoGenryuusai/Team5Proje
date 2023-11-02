@@ -14,18 +14,13 @@ public class AdminDashboard {
     @FindBy(xpath = "(//span[@class='aside-menu-title'])[12]")
     public WebElement paraBirimleriElementi;
 
-
-
-
-
     //Admin Dashboard >> Menü >> Users
     @FindBy(xpath = "//span[text()='Users']")
     public WebElement usersElementi;
 
-
-   //Admin Dashboard >> Menü >> Withdraw Transactions
-    @FindBy (xpath = "//span[text()='Withdraw Transactions']")
-    public WebElement paraCekmeIslemleriElementiANT;
+    //Admin Dashboard >> Menü >> Users >> SearchBox
+    @FindBy (xpath = "//*[@class='form-control ps-8']")
+    public WebElement usersSearchBoxANT;
 
     //Admin Dashboard >> Menü >> Currencies
     @FindBy (xpath = "//span[text()='Currencies']")
@@ -39,12 +34,17 @@ public class AdminDashboard {
     @FindBy (xpath = "//strong[text()='135']")
     public WebElement paraBirimleriSayisiElementiANT;
 
+    //Admin Dashboard >> Menü >> Withdraw Transactions
+    @FindBy (xpath = "//span[text()='Withdraw Transactions']")
+    public WebElement paraCekmeIslemleriElementiANT;
 
+    //Admin Dashboard >> Menü >> Withdraw Transactions >> webTableSatir
+    @FindBy (xpath = "//tbody/tr/td[1]")
+    public WebElement tableSatir;
 
-
-
-
-
+    //Admin Dashboard >> Menü >> User>> Kullanici >> Impersonate
+    @FindBy(xpath = "//tbody/tr[2]/td[4]")
+    public WebElement impersonate;
 
 
 
