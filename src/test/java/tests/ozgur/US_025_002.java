@@ -1,16 +1,12 @@
 package tests.ozgur;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.github.javafaker.Faker;
-import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.*;
 
-public class US_019_002 extends TestBaseRapor {
+public class US_025_002 extends TestBaseRapor {
      @Test
      public void test_2(){
          Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -35,8 +31,8 @@ public class US_019_002 extends TestBaseRapor {
          extentTest.info("//6-New Plans sekmesine tıkla");
          homePage.newPlanSekmesi.click();
          //Faker olusturma
-         Faker faker = new Faker();
-         String fname = faker.name().firstName();
+          Faker faker = new Faker();
+          String fname = faker.name().firstName();
          homePage.nameTextbox.sendKeys(fname);
          extentTest.info("Frequency girme");
          homePage.frequencyDropdown.click();

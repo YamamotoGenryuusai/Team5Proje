@@ -100,51 +100,62 @@ public class HomePage extends UserDashboard {
   //Ozgur
     @FindBy(xpath = "//*[text()=\"Plans\"]")
     public WebElement planSekmesi;
-
     @FindBy(xpath = "//a[@class='btn btn-primary ms-auto']")
     public WebElement newPlanSekmesi;
-
     @FindBy(xpath = "//a[@title='Delete'][1]")
     public WebElement deleteButton;
-
     @FindBy(xpath = "//button[@class='swal-button swal-button--confirm']")
     public WebElement deleteYesButton;
-
     @FindBy(xpath = "//tbody/tr[1]/td[1]")
     public WebElement uyelikPlani;
-
     @FindBy(xpath = "//*[@id=\"name\"]")
     public WebElement nameTextbox;
-
     @FindBy (xpath = "//*[@id=\"price\"]")
     public WebElement priceTextbox;
-
     @FindBy(xpath = "//*[@id=\"no_of_vcards\"]")
     public WebElement vcardTextbox;
-
     @FindBy(xpath = "//*[@id=\"trial_days\"]")
     public WebElement trialdaysTextbox;
-
     @FindBy(xpath = "//*[@id=\"select2-frequency-container\"]")
     public WebElement frequencyDropdown;
-
     @FindBy(xpath = "//input[@class='select2-search__field']")
     public WebElement dropDownSearchBox;
-
     @FindBy(xpath = "//input[@class='select2-search__field']")
     public WebElement dropDownCurrencysearchbox;
-
     @FindBy(xpath = "//*[@id=\"select2-currency_id-container\"]")
     public WebElement dropDownCurrency;
-
     @FindBy(xpath = "//*[@alt='Template 1'][1]")
     public WebElement template;
-
     @FindBy(xpath = "//*[@id=\"featureAll\"]")
     public WebElement checkbox1;
-
     @FindBy(xpath = "//*[@id=\"planFormSubmit\"]")
     public WebElement saveButton;
+    @FindBy(linkText = "Users")
+    public WebElement usersButton;
+    @FindBy(xpath = "//tbody/tr/td[5]")
+    public WebElement activeCheckbox;
+    @FindBy(xpath = "//a[@class='mb-1 text-decoration-none fs-6'][1]")
+    public WebElement users01;
+    @FindBy(xpath = "//div[@class='ms-0 ms-md-10 mt-5 mt-sm-0']")
+    public WebElement usernametest;
+    @FindBy(xpath = "//button[@class='btn btn-primary me-4']")
+    public WebElement editButton;
+    @FindBy(xpath = "//input[@name='first_name']")
+    public WebElement editnameTextBox;
+    @FindBy(xpath = "//input[@name='last_name']")
+    public WebElement editLastnameTextBox;
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement editemailTextBox;
+    @FindBy(xpath = "//input[@name='contact']")
+    public WebElement editcontactNo;
+    @FindBy(xpath = "//span[@class='select2-selection__rendered'][1]    ")
+    public WebElement editPlan;
+    @FindBy(xpath = "//input[@value='Save']")
+    public WebElement editSaveButton;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement alertYazisi;
+    @FindBy(xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamkullaniciSayisi;
 
 
 
