@@ -1,5 +1,7 @@
 package pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import pages.AdminDashboard;
 import utilities.Driver;
@@ -10,19 +12,17 @@ public class UserDashboard extends AdminDashboard {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    //User Dashboard >> Dashboard >> Kullanıcı isim
+    @FindBy(xpath = "//button[@id='dropdownMenuButton1']")
+    public WebElement userName;
 
+    //User Dashboard >> DMenü >> Appointments
+    @FindBy(xpath = "//span[text()='Appointments']")
+    public WebElement appointmentsElementi;
 
-
-
-
-
-
-
-
-
-
-
-
+    //User Dashboard >> DMenü >> Appointments Table
+    @FindBy(xpath = "//*[@class='table table-striped']")
+    public WebElement appointmentsWebTable;
 
 
 
