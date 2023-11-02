@@ -29,7 +29,6 @@ public class US04_TC01_09 extends TestBaseRapor {
         extentTest.pass("'© 2023 Copyright by Smart Card Link' metni görünür.");
 
         // 03_Browser kapatılır.
-        Driver.closeDriver();
         extentTest.info("Browser kapatılır.");
 
     }

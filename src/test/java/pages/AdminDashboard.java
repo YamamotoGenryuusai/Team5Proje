@@ -683,13 +683,13 @@ public class AdminDashboard {
     @FindBy(xpath = "//h5[text()='Subscribed Plan Details']")
     public WebElement subPlanDetailsElementHC;
 
+     //Anasayfa>>Sıgn In>>Subscribed Plan Details
+     @FindBy(xpath = "(//a[@class='btn px-1 text-primary fs-3 subscribed-user-plan-edit-btn'])[1]")
+     public WebElement supEditButtonHC;
 
-
-
-
-
-
-
+     //Anasayfa>>Sıgn In>>Subscribed Plan Details>>Edit Subscription Plan
+     @FindBy(xpath = "//h3[@class='modal-title']")
+     public WebElement espAdElementHC;
 
 
 
@@ -1135,17 +1135,17 @@ public class AdminDashboard {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement espSaveElementHC;
 
+    //Anasayfa>>Sıgn In>>Edit Subscription Plan
+    @FindBy(xpath = "//input[@class='numInput cur-year']")
+    public WebElement espYillementHC;
 
+     //Anasayfa>>Sıgn In>>Edit Subscription Plan
+     @FindBy(xpath = "//span[@class='arrowUp']")
+     public WebElement espArrowUplementHC;
 
-
-
-
-
-
-
-
-
-
+     //Anasayfa>>Sıgn In>>Edit Subscription Plan
+     @FindBy(xpath = "(//span[@class='flatpickr-day'])[10]")
+     public WebElement espGunElement;
 
 
 
