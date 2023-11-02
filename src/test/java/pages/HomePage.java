@@ -1037,5 +1037,29 @@ public class HomePage extends UserDashboard {
     //Home page Contact Us bölümü Send Message Butonu
     @FindBy(xpath = "//input[@id='submit']")
     public WebElement homePageSubmitButton;
+    //Home page Subscribe here bölümü emailBox
+    @FindBy(xpath = "(//input[@name='email'])[2]")
+    public WebElement subscribeHereMailBox;
+    //Home page Subscribe here bölümü Subscribe butonu
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement subscribeHereSubscribeButton;
+    //Home page Subscribe here bölümü başarılı bildirim texti
+    @FindBy(xpath = "//div[@id='toast-container']")
+    public WebElement subscribeHereBildirim;
+    //Home page Stories From Our Customers bölümü Stories From Our Customers textboxı
+    @FindBy(xpath = "//h2[@class='text-white text-center mb-60']")
+    public WebElement storiesFOCText;
+    //Home page Stories From Our Customers bölümü 2.tab butonu
+    @FindBy(xpath = "//button[@id='slick-slide-control11']")
+    public WebElement storiesTabButton2;
+    //Home page Stories From Our Customers bölümü mervenin yorumu
+    @FindBy(xpath = "//*[@id='slick-slide11']/p")
+    public WebElement storiesYorumText1;
+    //Home page Stories From Our Customers bölümü 3.tab butonu
+    @FindBy(xpath = "//button[@id='slick-slide-control12']")
+    public WebElement storiesTabButton3;
+    //Home page Stories From Our Customers bölümü bhdr yorumu
+    @FindBy(xpath = "//*[@id='slick-slide12']/p")
+    public WebElement storiesYorumText2;
 
 }

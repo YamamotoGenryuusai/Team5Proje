@@ -1,5 +1,6 @@
 package tests.ozan;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
@@ -7,12 +8,12 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class US_03_TC01 extends TestBaseRapor {
+public class US03_TC01 extends TestBaseRapor {
+    HomePage homePage=new HomePage();
     @Test
     public void test01(){
         extentTest=extentReports.createTest("Ana sayfa Get Started buton testi","Get Started butonu görünür,aktif ve ilgili sayfaya yönlendirmelidir.");
         SoftAssert softAssert=new SoftAssert();
-        HomePage homePage=new HomePage();
         extentTest.info("Tarayıcı açılır site ana sayfasına gidilir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Get Started butonunun görünülürlüğü test eder.");

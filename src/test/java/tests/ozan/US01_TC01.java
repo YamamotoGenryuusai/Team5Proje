@@ -6,9 +6,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class US_01_TC01 extends TestBaseRapor {
-
-    //Bir ziyaretçi olarak siteyi kullanabilmek icin web sitesine erişebildiğimi doğrulayabilmeliyim
+public class US01_TC01 extends TestBaseRapor {
     @Test
     public void test01(){
         extentTest=extentReports.createTest("Website erişilebilirlik testi.","Kullanıcı site ana sayfaya erişebilmeli.");
