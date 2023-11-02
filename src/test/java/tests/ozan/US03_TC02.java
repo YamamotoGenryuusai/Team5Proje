@@ -5,11 +5,11 @@ import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import utilities.*;
 
-public class US_03_TC02 extends TestBaseRapor {
+public class US03_TC02 extends TestBaseRapor {
+    HomePage homePage=new HomePage();
     @Test
     public void test01() {
         extentTest = extentReports.createTest("Ana sayfa Choose Plan butonu testi","Choose Plan butonu aktif,görünür ve ilgili sayfaya yönlendirmelidir.");
-        HomePage homePage = new HomePage();
         SoftAssert softAssert = new SoftAssert();
         extentTest.info("Site ana sayfasına gider.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -26,18 +26,18 @@ public class US_03_TC02 extends TestBaseRapor {
         String expectedUrl = "https://qa.smartcardlink.com/login";
         String actualUrl = Driver.getDriver().getCurrentUrl();
         softAssert.assertTrue(actualUrl.contains(expectedUrl), "Choose Plan butonu doğru sayfaya yönlendirmiyor.");
-
+        softAssert.assertAll();
         extentTest.pass("Choose Plan butonu görünür,aktif ve ilgili sayfaya yönlendirir.");
     }
     @Test
     public void test02(){
         extentTest=extentReports.createTest("Plan seçim tuş testi","Plan seçim tusları görünür ve aktif olmalıdır.");
-        HomePage homePage=new HomePage();
         SoftAssert softAssert=new SoftAssert();
         extentTest.info("Tarayıcı açılır site ana sayfasına gidilir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Ana sayfa Choose plan bölümüne kadar gelinir.");
         JSUtilities.scrollToElement(Driver.getDriver(),homePage.chosePlanStandardText);
+        ReusableMethods.wait(1);
         extentTest.info("Plan seçim butonu testleri yapılır.");
         homePage.choosePlanKaydirma.click();
         ReusableMethods.wait(1);

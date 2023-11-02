@@ -1,8 +1,5 @@
 package tests.ozan;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -11,13 +8,11 @@ import utilities.Driver;
 import utilities.JSUtilities;
 import utilities.TestBaseRapor;
 
-import javax.swing.*;
-
-public class US_03_TC06 extends TestBaseRapor {
+public class US03_TC05 extends TestBaseRapor {
+    HomePage homePage=new HomePage();
     @Test
     public void test01(){
-        extentTest=extentReports.createTest("Ana sayfa Contact Us bölümü textbox'ları ve Send Mesaage buton testi","Textbox'lar ve Send Message butonu görünür ver aktif olmalıdır.");
-        HomePage homePage=new HomePage();
+        extentTest=extentReports.createTest("Ana sayfa Contact Us bölümü textbox'ları ve Send Message buton testi","Textbox'lar ve Send Message butonu görünür ver aktif olmalıdır.");
         extentTest.info("Tarayıcı açılır ve ana sayfaya gidilir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Contact Us bölümüne gidilir.");
