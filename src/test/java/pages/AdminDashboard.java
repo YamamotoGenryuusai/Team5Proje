@@ -199,49 +199,49 @@ public class AdminDashboard {
 
 //Cemil
 
+    // Homepage //Sign in//Admin Log in// Countries
+    @FindBy(xpath ="//span[text()='Countries']")
+    public WebElement countriesButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries
+    @FindBy(xpath ="//div[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement countriesCountCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//States
+    @FindBy(xpath ="//a[@href='https://qa.smartcardlink.com/sadmin/states' and contains(text(),'States')]")
+    public WebElement stateButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//States
+    @FindBy(xpath ="//a[@href='https://qa.smartcardlink.com/sadmin/cities' and contains(text(),'Cities')]")
+    public WebElement cityButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//States Count
+    @FindBy(xpath ="//div [@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement stateCountCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//City Count
+    @FindBy(xpath ="//div [@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement cityCountCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country
+    @FindBy(xpath ="//a[@id='newCountryBtn']")
+    public WebElement newcountryButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country // Add Name
+    @FindBy(xpath ="//input[@id='countryName']")
+    public WebElement addCountryButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country//ShortCode
+    @FindBy(xpath ="//input[@id='short_code']")
+    public WebElement addShortCodeCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country//Phone Code
+    @FindBy(xpath ="//input[@id='phone_code']")
+    public WebElement addPhoneCodeCO;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Homepage //Sign in//Admin Log in// Countries//New Country//Save Button
+    @FindBy(xpath ="//button[@id='btnSave']")
+    public WebElement addSaveCountryButtonCO;
 
 
 

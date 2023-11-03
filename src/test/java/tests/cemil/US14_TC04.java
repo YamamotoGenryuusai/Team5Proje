@@ -7,17 +7,17 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class US07_TC01 extends TestBaseRapor {
-    //As a registered user, I should be able to reach the
-    //dasboard page and that the items on the page are displayable
+public class US14_TC04 extends TestBaseRapor {
+
+    // After logging in as a registered user, I should be able to confirm that
+    //  I can make a user output.
+
     @Test
-    public void test01(){
-        //As a registered user, I should be able to reach the
-        //dasboard page and confirmed.
+    public void test01() {
 
         HomePage homePage = new HomePage();
-        extentTest=extentReports.createTest("Website home page dashboard accessibility test.",
-       "As a registered user, It can access the dashboard with a valid e-mail and password on the home page.");
+        extentTest = extentReports.createTest("User sign out test.",
+                "The registered user must verify that the user has logged out.");
 
         extentTest.info("Browser opens");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -30,13 +30,22 @@ public class US07_TC01 extends TestBaseRapor {
         homePage.passwordTextBox.sendKeys(ConfigReader.getProperty("scGecerliPasswordCO"));
         homePage.loginButonu.click();
 
-        extentTest.info("It is tested that the dashboard can be accessed");
-        String expectedUrl="https://qa.smartcardlink.com/admin/dashboard";
+        extentTest.info("Go to the profile section");
+        homePage.profilPageCO.click();
+
+        extentTest.info("User logs out");
+        homePage.signOutButtonCO.click();
+
+        extentTest.info("Confirms that the user is logged out");
+        String expectedUrl="https://qa.smartcardlink.com/login";
         String actualUrl=Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(actualUrl,expectedUrl,"Dasboard login failed");
-        extentTest.pass("Dashboard verification test successful");
+
+        Assert.assertEquals(actualUrl,expectedUrl,"User output failed");
+        extentTest.pass("User Sign Out verification test successful");
 
         extentTest.info("Browser closed");
+
+
 
 
     }

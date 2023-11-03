@@ -197,17 +197,6 @@ public class HomePage extends UserDashboard {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     //Cemil
 
     //Homepage>> LoginLink>> Logın Butonu // Profile Page
@@ -261,6 +250,14 @@ public class HomePage extends UserDashboard {
     // Profile Page //Account Settings//Confirm Password
     @FindBy(xpath ="//span[@id='select2-selectLanguage-container']")
     public WebElement selectLanguageBoxCO;
+
+    // Profile Page //Account Settings//Sign Out
+    @FindBy(xpath ="//span[contains(text(), 'Sign Out')]")
+    public WebElement signOutButtonCO;
+
+    // Homepage //Sign in//Admin Log in// Countries
+    @FindBy(xpath ="//span[text()='Countries']")
+    public WebElement countriesButtonCO;
 
 
 
