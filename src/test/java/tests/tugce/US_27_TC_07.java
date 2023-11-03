@@ -14,11 +14,11 @@ import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class US_26_TC_05 extends TestBaseRapor {
+public class US_27_TC_07 extends TestBaseRapor {
 
     @Test
-    public void US_26_TC_05(){
-        extentTest = extentReports.createTest("affiliationAmountTesti", "'Affiliated Amount' basliginin altinda ortaklik miktarlarinin gorunur oldugu dogrulanir");
+    public void US_27_TC_07() {
+        extentTest = extentReports.createTest("affiliationTransactionsDateTesti", "Date basligi altinda ortaklik tarihlerinin gorunur oldugu dogrulanir");
 
         extentTest.info("1- Browser acilir ve istenen URL (https://qa.smartcardlink.com/) yazilarak test sayfasina gidilir");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -32,22 +32,22 @@ public class US_26_TC_05 extends TestBaseRapor {
         adminHomePage.adminPasswordBox.sendKeys(ConfigReader.getProperty("scAdminPassword"));
         adminHomePage.adminLoginButonu.click();
 
-        extentTest.info("4- Dashboard bolumunden 'Affiliate Users' sekmesine tiklanir");
+        extentTest.info("4- Dashboard bolumunden 'Affiliation Transactions' sekmesine tiklanir");
         AdminDashboard adminDashboard = new AdminDashboard();
-        adminDashboard.affiliateUsersSekmesi.click();
+        adminDashboard.affiliationTransactionsSekmesi.click();
 
-        extentTest.info("5- 'Affiliation Amount' basliginin gorunur oldugu kontrol edilir.");
-        Assert.assertTrue(adminDashboard.affiliationAmountBaslikElementi.isDisplayed());
+        extentTest.info("5- 'Date' basliginin gorunur oldugu kontrol edilir");
+        Assert.assertTrue(adminDashboard.affiliationTransactionsDateElementi.isDisplayed());
 
-        extentTest.info("'Affiliated Amount' basliginin altinda ortaklik miktarlarinin gorunur oldugu kontrol edilir");
+        extentTest.info("6- Date basligi altinda ortaklik tarihlerinin gorunur oldugu kontrol edilir");
         Select select = new Select(adminDashboard.perPageItemi);
         select.selectByIndex(2);
 
         ReusableMethods.wait(3);
 
-        List<WebElement> ortaklikTutarListesi = Driver.getDriver().findElements(By.xpath("//*[@class='badge bg-success me-2']"));
-        for (WebElement eachTutar:ortaklikTutarListesi) {
-            Assert.assertTrue(eachTutar.isDisplayed());
+        List<WebElement> ortaklikTarihListesi = Driver.getDriver().findElements(By.xpath("//*[@class='whitespace-nowrap px-3 py-2 md:px-6 md:py-4 text-sm leading-5 text-gray-900 dark:text-white text-center']"));
+        for (WebElement eachDate:ortaklikTarihListesi) {
+            Assert.assertTrue(eachDate.isDisplayed());
         }
 
     }

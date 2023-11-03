@@ -10,36 +10,40 @@ import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-public class US_26_TC_03 {
+public class US_26_TC_03 extends TestBaseRapor {
 
     @Test
-    public void affiliatedByTesti() {
-        // 1- Browser acilir ve istenen URL (https://qa.smartcardlink.com/) yazilarak test sayfasina gidilir
+    public void US_26_TC_03() {
+        extentTest = extentReports.createTest("affiliatedBySekmesiTesti", "'Affiliated By' basliginin altinda ortaklik kaydi yapan yetkili kullanicilarin isimlerinin gorunur oldugu dogrulanir");
+
+        extentTest.info("1- Browser acilir ve istenen URL (https://qa.smartcardlink.com/) yazilarak test sayfasina gidilir");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
 
-        // 2- Login butonuna tiklanir
+        extentTest.info("2- Login butonuna tiklanir");
         HomePage adminHomePage = new HomePage();
         adminHomePage.adminSigninButonu.click();
 
-        // 3- Gecerli bilgilerle admin girisi yapilir
+
+        extentTest.info("3- Gecerli bilgilerle admin girisi yapilir");
         adminHomePage.adminEmailBox.sendKeys(ConfigReader.getProperty("scAdminEmail"));
         adminHomePage.adminPasswordBox.sendKeys(ConfigReader.getProperty("scAdminPassword"));
         adminHomePage.adminLoginButonu.click();
 
-        // 4- Dashboard bolumunden 'Affiliate Users' sekmesine tiklanir
+        extentTest.info("4- Dashboard bolumunden 'Affiliate Users' sekmesine tiklanir");
         AdminDashboard adminDashboard = new AdminDashboard();
         adminDashboard.affiliateUsersSekmesi.click();
 
-        // 5- 'Affiliated By' basliginin gorunur oldugu kontrol edilir.
+        extentTest.info("5- 'Affiliated By' basliginin gorunur oldugu kontrol edilir.");
         Assert.assertTrue(adminDashboard.affiliatedByBaslikElementi.isDisplayed());
 
-        // 6- 'Affiliated By' basliginin altinda ortaklik kaydi yapan yetkili kullanicilarin isimlerinin gorunur oldugu kontrol edilir
+        extentTest.info("6- 'Affiliated By' basliginin altinda ortaklik kaydi yapan yetkili kullanicilarin isimlerinin gorunur oldugu kontrol edilir");
         Select select = new Select(adminDashboard.perPageItemi);
         select.selectByIndex(2);
 
@@ -52,7 +56,5 @@ public class US_26_TC_03 {
             }
         }
 
-        // 7- Browser kapatilir
-        Driver.closeDriver();
     }
 }
