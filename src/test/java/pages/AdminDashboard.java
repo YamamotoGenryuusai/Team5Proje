@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 import utilities.Driver;
 
 public class AdminDashboard {
@@ -398,81 +399,80 @@ public class AdminDashboard {
 
 
 //Gulay
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ // SAdmin Dashboard Text
+ @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+ public WebElement sAdminDashboardText;
+
+@FindBy(xpath = "//span[text()='Coupon Codes']")
+public WebElement couponCodesButonu_gg;
+
+@FindBy (xpath = "//a[text()='Add Coupon Code']")
+public WebElement addCouponCodeButonu_gg;
+
+@FindBy(xpath = "(//h3[@class='modal-title'])[1]")
+public WebElement addCouponCodePenceresiAddCouponCodeTextigg;
+
+@FindBy(xpath = "(//input[@type='text'])[2]")
+public  WebElement addCouponCodeCouponNameAlanigg;
+
+
+@FindBy (xpath = "//input[@id='fixedType']")
+public WebElement addCouponCodeFixedTypeCheckBoxgg;
+
+@FindBy(xpath = "//input[@id='percentageType']")
+public WebElement addCouponCodePercentageCheckBoxgg;
+
+@FindBy (xpath = "//input[@id='couponDiscount']")
+public WebElement addCouponCodeEnterCouponDiscountgg;
+
+@FindBy(xpath = "//input[@id='couponExpireAt']")
+public WebElement addCouponCodePercentageExprireAtgg;
+
+@FindBy (xpath = "(//button[@type='submit'])[1]")
+public  WebElement addCouponCodeSaveButonu;
+
+@FindBy(xpath = "//div[@class='toast-message']")
+public WebElement couponCodeCreatedSuccesfullyText;
+
+@FindBy(xpath = "(//select[@class='flatpickr-monthDropdown-months'])[1]")
+public  WebElement addcouponCodeMonths;
+
+
+@FindBy(xpath = "(//span[@aria-label='November 29, 2023'])[1]")
+public  WebElement addCouponCodeDate;
+@FindBy(xpath = "(//input[@name='status'])[1]")
+public  WebElement couponCodesStatusButonugg;
+@FindBy(xpath = "//div[@class='toast-message']")
+public WebElement couponCodeStatusUpdatedMessage_gg;
+@FindBy(xpath = "(//*[@data-icon='pen-to-square'])[1]")
+public WebElement couponCodesEditButonugg;
+
+@FindBy(xpath = "(//a[@title='Delete'])[1]")
+public WebElement couponCodesDeleteButonugg;
+
+@FindBy(xpath = "//button[text()='Yes, Delete!']")
+public  WebElement couponCodesYesDeleteTextgg;
+@FindBy (xpath = "//input[@id='editCouponName']")
+public WebElement editCouponCode_CouponeNamealanigg;
+@FindBy(xpath = "//input[@id='editCouponDiscount']")
+public WebElement editCouponCode_CouponeDiscountgg;
+@FindBy(xpath = "//input[@id='editCouponFixedType']")
+public WebElement editCouponCode_FixedTypegg;
+@FindBy(xpath = "//input[@id='editCouponPercentageType']")
+public WebElement editCouponCode_percentagegg;
+@FindBy (xpath = "//input[@id='editCouponExpireAt']")
+public WebElement editCouponCode_ExpireAtgg;
+
+@FindBy(xpath = "(//select[@aria-label='Month'])[2]")
+public WebElement editCouponCode_November;
+@FindBy (xpath = "(//span[@aria-label='November 10, 2023'])[2]")
+public WebElement editCouponCode_November10;
+@FindBy(xpath = "//*[@id='editCouponCodeSaveBtn']")
+public WebElement editCouponCodeSaveButonugg;
+@FindBy(xpath = "//div[@class='toast-message']")
+public WebElement couponCodesCodesUpdatesSuccesfullyTextgg;
+@FindBy (xpath = "//div[text()='Deleted !']")
+public WebElement couponCodesDeletedTextgg;
 
 
 

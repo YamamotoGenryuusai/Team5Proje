@@ -7,41 +7,50 @@ import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_05_TC_03 {
+public class US_05_TC_03 extends TestBaseRapor {
     @Test
     public void US_05_TC_03 () {
-        //1-	Browser acilir
-        //2-	Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir.3-Sitenin ana sayfasina gidilir
+        extentTest=extentReports.createTest("yeni hesap olusturma testi");
+
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         ReusableMethods.wait(2);
-        //4-	Sign in butonuna tıklanır
+        extentTest.info("Browser acilir, Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir. Sitenin ana sayfasina gidilir");
+
         HomePage homePage= new HomePage();
         homePage.signInButton.click();
-        //5-	Create an account butonu tıklanır
+        extentTest.info("Sign in butonuna tıklanır");
+
         homePage.createAnAccountLinkgg.click();
-        //6-	First name alanı doldurulur
+        extentTest.info("Create an account butonu tıklanır");
+
         Faker faker= new Faker();
        String  password= faker.internet().password(9,12,true,true);
 
         homePage.cAfirstNameAlanigg.sendKeys(faker.name().firstName());
-        //6-	Last name alanı doldurulur
-        homePage.cAlastNameAlanigg.sendKeys(faker.name().lastName());
-        // 7-	Email alanı doldurulur
-        homePage.cAEMailalanigg.sendKeys(faker.internet().emailAddress());
-        //8-	Password alanı doldurulur
-        homePage.cAPasswordAlanigg.sendKeys(password);
-        // 9-	Confirm Password alanı doldurulur
-        homePage.cAConfirmPasswordAlanigg.sendKeys(password);
-        //10-	By signing up you agree to our Terms & Conditions & Privacy Policy” butonu tıklanır
-        homePage.cABySigningUpgg.click();
-        // 11-	Submit butonu tıklanır.
-        homePage.cASubmitButonugg.click();
-        //12-	Sign in yazısının göründüğünü doğrulanır
-        // "You have registered successfully" mesajı cok kısa surede kayboldugu icin
-        // basarili giris yapidiginda yonlend,rd,g, sayfadan "Sign In" textinin goruntulendigi test edildi
-        Assert.assertTrue(homePage.basarliCreatAccountSignInText_gg.isDisplayed());
+        extentTest.info("First name alanı doldurulur");
 
+        homePage.cAlastNameAlanigg.sendKeys(faker.name().lastName());
+        extentTest.info("Last name alanı doldurulur");
+
+        homePage.cAEMailalanigg.sendKeys(faker.internet().emailAddress());
+        extentTest.info("Email alanı doldurulur");
+
+        homePage.cAPasswordAlanigg.sendKeys(password);
+        extentTest.info("Password alanı doldurulur");
+
+        homePage.cAConfirmPasswordAlanigg.sendKeys(password);
+        extentTest.info("Confirm Password alanı doldurulur");
+
+        homePage.cABySigningUpgg.click();
+        extentTest.info("By signing up you agree to our Terms & Conditions & Privacy Policy” butonu tıklanır");
+
+        homePage.cASubmitButonugg.click();
+        extentTest.info("Submit butonu tıklanır.");
+
+        Assert.assertTrue(homePage.basarliCreatAccountSignInText_gg.isDisplayed());
+        extentTest.pass("Sign in yazısının göründüğünü doğrulandi.");
 
 
 

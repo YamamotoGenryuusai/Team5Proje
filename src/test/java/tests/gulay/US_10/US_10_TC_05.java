@@ -6,46 +6,41 @@ import pages.HomePage;
 import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_10_TC_05 {
+public class US_10_TC_05 extends TestBaseRapor {
 
     SoftAssert softAssert= new SoftAssert();
 
     @Test
     public void US_10_TC_05 () {
-        //1-	Browser acilir
-                //2-	Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir.
-                // 3-	Sitenin log in  sayfasina gidilir
+
+        extentTest=extentReports.createTest("Enquiries Details penceresinde e-mail yazisi goruntuleme testi");
 
                 Driver.getDriver().get(ConfigReader.getProperty("scLoginUrl_gg"));
+                extentTest.info("Browser acilir, Adres çubuğuna log in URL girilir, Enter tusuna tiklanir. Log in gidilir");
 
                 UserDashboard userDashboard = new UserDashboard();
                 HomePage homePage= new HomePage();
-                // 4-	 Email alanına geçerli email girilir
 
                 homePage.emailtextBox.sendKeys(ConfigReader.getProperty("gecerliEMail_gg"));
-
-
-                // 5-   Password alanına gecerli password girilir
+                extentTest.info("Email alanına geçerli email girilir");
 
                 homePage.passwordTextBox.sendKeys(ConfigReader.getProperty("gecerliSifre_gg"));
+                extentTest.info("Password alanına gecerli password girilir");
 
-
-                // 6- Log in butonuna tiklanir
 
                 homePage.loginButonu.click();
-
-                // 7 	Enquiries butonuna tıklanır
+                extentTest.info("Log in butonuna tiklanir");
 
                 homePage.adminEnquiriesText_gg.click();
+                extentTest.info("Enquiries butonuna tıklanır");
 
-                // 8-	Enquries sayfasında view ikonuna tıklanır
                 homePage.enquiriesSayfasiViewIkonu_gg.click();
+                extentTest.info("Enquries sayfasında view ikonuna tıklanır");
 
-                // 8-	Email yazisinin goruntulendigini dogrular
                 softAssert.assertTrue(homePage.enquiriesDetailsEMail_gg.isDisplayed());
-
-                Driver.closeDriver();
+                extentTest.pass("Email yazisinin goruntulendigini dogrulandi");
 
             }
 }
