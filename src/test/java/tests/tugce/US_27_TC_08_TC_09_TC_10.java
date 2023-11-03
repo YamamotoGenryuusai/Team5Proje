@@ -95,7 +95,7 @@ public class US_27_TC_08_TC_09_TC_10 extends TestBaseRapor {
         AdminDashboard adminDashboard = new AdminDashboard();
         adminDashboard.affiliationTransactionsSekmesi.click();
 
-        extentTest.info("5- View butonlarindan birine tiklanir, pencerenin gorundugu kontrol edilir");
+        extentTest.info("5- View butonlarina sirayla tiklanir, pencerenin gorundugu kontrol edilir");
         List<WebElement> actionViewListesi = Driver.getDriver().findElements(By.xpath("//*[@class='svg-inline--fa fa-eye text-info']"));
         ReusableMethods.wait(2);
 

@@ -36,10 +36,10 @@ public class US_26_TC_06 extends TestBaseRapor{
         AdminDashboard adminDashboard = new AdminDashboard();
         adminDashboard.affiliateUsersSekmesi.click();
 
-        extentTest.info("5- 'Date' basliginin gorunur oldugu kontrol edilir.");
+        extentTest.info("5- 'Date' basliginin gorunur oldugu kontrol edilir");
         Assert.assertTrue(adminDashboard.affiliationDateBaslikElementi.isDisplayed());
 
-        extentTest.info("'Affiliated By' basliginin altinda ortaklik miktarlarinin gorunur oldugu kontrol edilir");
+        extentTest.info("6- 'Date' basliginin altinda ortaklik miktarlarinin gorunur oldugu kontrol edilir");
         Select select = new Select(adminDashboard.perPageItemi);
         select.selectByIndex(2);
 

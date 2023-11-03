@@ -40,7 +40,7 @@ public class US_26_TC_03 extends TestBaseRapor {
         AdminDashboard adminDashboard = new AdminDashboard();
         adminDashboard.affiliateUsersSekmesi.click();
 
-        extentTest.info("5- 'Affiliated By' basliginin gorunur oldugu kontrol edilir.");
+        extentTest.info("5- 'Affiliated By' basliginin gorunur oldugu kontrol edilir");
         Assert.assertTrue(adminDashboard.affiliatedByBaslikElementi.isDisplayed());
 
         extentTest.info("6- 'Affiliated By' basliginin altinda ortaklik kaydi yapan yetkili kullanicilarin isimlerinin gorunur oldugu kontrol edilir");
