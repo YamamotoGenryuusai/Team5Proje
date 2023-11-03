@@ -21,7 +21,6 @@ public class US20_TC01_04 extends TestBaseRapor {
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-
         homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
@@ -44,11 +43,12 @@ public class US20_TC01_04 extends TestBaseRapor {
         extentTest.pass("Admin bilgileri ile başaralı bir şekilde giriş yapıldı.");
 
         // 07_Browser kapatılır.
-        Driver.closeDriver();
         extentTest.info("Browser kapatılır.");
 
     }
 
+
+    //Admin bilgileri ile giriş yaptıktan sonra 'Users' sekmesi görünür ve tıklanabilir olmalıdır. Ayrıca, tıklama işlemi doğru sayfaya yönlendirmelidir.
     @Test
     public void test02(){
         HomePage homePage=new HomePage();
@@ -62,7 +62,6 @@ public class US20_TC01_04 extends TestBaseRapor {
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-
         homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
@@ -90,7 +89,6 @@ public class US20_TC01_04 extends TestBaseRapor {
         extentTest.pass("Click işlemi doğru sayfaya yönlendirdi.");
 
         // 07_Browser kapatılır.
-        Driver.closeDriver();
         extentTest.info("Browser kapatılır.");
 
     }
@@ -137,7 +135,6 @@ public class US20_TC01_04 extends TestBaseRapor {
         extentTest.pass("Kayıtlı kullanıcıların abonelik planı görüntülenebiliyor.");
 
         // 07_Browser kapatılır.
-        Driver.closeDriver();
         extentTest.info("Browser kapatılır.");
 
     }
@@ -198,7 +195,6 @@ public class US20_TC01_04 extends TestBaseRapor {
         extentTest.pass("Admin hesabından kayıtlı kullanıcı hesabına geçiş yapılıp, başarılı bir şekilde admin hesabına geri dönüş yapıldı.");
 
         // 11_Browser kapatılır.
-        Driver.closeDriver();
         extentTest.info("Browser kapatılır.");
 
     }

@@ -100,60 +100,62 @@ public class HomePage extends UserDashboard {
   //Ozgur
     @FindBy(xpath = "//*[text()=\"Plans\"]")
     public WebElement planSekmesi;
-
     @FindBy(xpath = "//a[@class='btn btn-primary ms-auto']")
     public WebElement newPlanSekmesi;
-
     @FindBy(xpath = "//a[@title='Delete'][1]")
     public WebElement deleteButton;
-
     @FindBy(xpath = "//button[@class='swal-button swal-button--confirm']")
     public WebElement deleteYesButton;
-
     @FindBy(xpath = "//tbody/tr[1]/td[1]")
     public WebElement uyelikPlani;
-
     @FindBy(xpath = "//*[@id=\"name\"]")
     public WebElement nameTextbox;
-
     @FindBy (xpath = "//*[@id=\"price\"]")
     public WebElement priceTextbox;
-
     @FindBy(xpath = "//*[@id=\"no_of_vcards\"]")
     public WebElement vcardTextbox;
-
     @FindBy(xpath = "//*[@id=\"trial_days\"]")
     public WebElement trialdaysTextbox;
-
     @FindBy(xpath = "//*[@id=\"select2-frequency-container\"]")
     public WebElement frequencyDropdown;
-
     @FindBy(xpath = "//input[@class='select2-search__field']")
     public WebElement dropDownSearchBox;
-
     @FindBy(xpath = "//input[@class='select2-search__field']")
     public WebElement dropDownCurrencysearchbox;
-
     @FindBy(xpath = "//*[@id=\"select2-currency_id-container\"]")
     public WebElement dropDownCurrency;
-
     @FindBy(xpath = "//*[@alt='Template 1'][1]")
     public WebElement template;
-
     @FindBy(xpath = "//*[@id=\"featureAll\"]")
     public WebElement checkbox1;
-
     @FindBy(xpath = "//*[@id=\"planFormSubmit\"]")
     public WebElement saveButton;
-
-
-
-
-
-
-
-
-
+    @FindBy(linkText = "Users")
+    public WebElement usersButton;
+    @FindBy(xpath = "//tbody/tr/td[5]")
+    public WebElement activeCheckbox;
+    @FindBy(xpath = "//a[@class='mb-1 text-decoration-none fs-6'][1]")
+    public WebElement users01;
+    @FindBy(xpath = "//div[@class='ms-0 ms-md-10 mt-5 mt-sm-0']")
+    public WebElement usernametest;
+    @FindBy(xpath = "//button[@class='btn btn-primary me-4']")
+    public WebElement editButton;
+    @FindBy(xpath = "//input[@name='first_name']")
+    public WebElement editnameTextBox;
+    @FindBy(xpath = "//input[@name='last_name']")
+    public WebElement editLastnameTextBox;
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement editemailTextBox;
+    @FindBy(xpath = "//input[@name='contact']")
+    public WebElement editcontactNo;
+    @FindBy(xpath = "//span[@class='select2-selection__rendered'][1]    ")
+    public WebElement editPlan;
+    @FindBy(xpath = "//input[@value='Save']")
+    public WebElement editSaveButton;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement alertYazisi;
+    @FindBy(xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamkullaniciSayisi;
 
 
 
@@ -197,57 +199,65 @@ public class HomePage extends UserDashboard {
 
     //Cemil
 
+    //Homepage>> LoginLink>> Logın Butonu // Profile Page
+    @FindBy(xpath ="//button[@id='dropdownMenuButton1']")
+    public WebElement profilPageCO;
 
+    // Profile Page //Account Settings//Displayed
+    @FindBy(xpath ="//a[@class='dropdown-item text-gray-900'][1]")
+    public WebElement changeProfilButtonCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Full Name Row
+    @FindBy(xpath ="//input[@id='editProfileFirstName']")
+    public WebElement editNameBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Full NameRow
+    @FindBy(xpath ="//input[@id='editProfileLastName']")
+    public WebElement editLastNameBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//e-mail
+    @FindBy(xpath ="//input[@id='isEmailEditProfile']")
+    public WebElement editMailBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Phone Number
+    @FindBy(xpath ="//input[@id='phoneNumber']")
+    public WebElement editPhoneBoxCO;
 
+    // Profile Page //Account Settings//Profil Information Page//Phone Number
+    @FindBy(xpath ="//input[@type='submit' and @value='Save' and contains(@class, 'btn-primary')]")
+    public WebElement saveButtonCO;
 
+    // Profile Page //Account Settings//ChangePassword
+    @FindBy(xpath ="//*[@id='changePassword']")
+    public WebElement changePasswordCO;
 
+    // Profile Page //Account Settings//Change Password
+    @FindBy(xpath ="//input[@id='current_password']")
+    public WebElement currentPasswordCO;
 
+    // Profile Page //Account Settings//New Password
+    @FindBy(xpath ="//input[@id='new_password']")
+    public WebElement newPasswordCO;
 
+    // Profile Page //Account Settings//Confirm Password
+    @FindBy(xpath ="//input[@id='confirm_password']")
+    public WebElement confirmPasswordCO;
 
+    // Profile Page //Account Settings//Confirm Password
+    @FindBy(xpath ="//button[@id='passwordChangeBtn']")
+    public WebElement savePasswordChangeButtonCO;
 
+    // Profile Page //Account Settings//Confirm Password
+    @FindBy(xpath ="//span[@id='select2-selectLanguage-container']")
+    public WebElement selectLanguageBoxCO;
 
+    // Profile Page //Account Settings//Sign Out
+    @FindBy(xpath ="//span[contains(text(), 'Sign Out')]")
+    public WebElement signOutButtonCO;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Homepage //Sign in//Admin Log in// Countries
+    @FindBy(xpath ="//span[text()='Countries']")
+    public WebElement countriesButtonCO;
 
 
 
@@ -296,8 +306,6 @@ public class HomePage extends UserDashboard {
 
 
     //Taha
-
-
 
 
 
@@ -1037,5 +1045,29 @@ public class HomePage extends UserDashboard {
     //Home page Contact Us bölümü Send Message Butonu
     @FindBy(xpath = "//input[@id='submit']")
     public WebElement homePageSubmitButton;
+    //Home page Subscribe here bölümü emailBox
+    @FindBy(xpath = "(//input[@name='email'])[2]")
+    public WebElement subscribeHereMailBox;
+    //Home page Subscribe here bölümü Subscribe butonu
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement subscribeHereSubscribeButton;
+    //Home page Subscribe here bölümü başarılı bildirim texti
+    @FindBy(xpath = "//div[@id='toast-container']")
+    public WebElement subscribeHereBildirim;
+    //Home page Stories From Our Customers bölümü Stories From Our Customers textboxı
+    @FindBy(xpath = "//h2[@class='text-white text-center mb-60']")
+    public WebElement storiesFOCText;
+    //Home page Stories From Our Customers bölümü 2.tab butonu
+    @FindBy(xpath = "//button[@id='slick-slide-control11']")
+    public WebElement storiesTabButton2;
+    //Home page Stories From Our Customers bölümü mervenin yorumu
+    @FindBy(xpath = "//*[@id='slick-slide11']/p")
+    public WebElement storiesYorumText1;
+    //Home page Stories From Our Customers bölümü 3.tab butonu
+    @FindBy(xpath = "//button[@id='slick-slide-control12']")
+    public WebElement storiesTabButton3;
+    //Home page Stories From Our Customers bölümü bhdr yorumu
+    @FindBy(xpath = "//*[@id='slick-slide12']/p")
+    public WebElement storiesYorumText2;
 
 }
