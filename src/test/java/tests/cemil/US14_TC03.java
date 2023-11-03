@@ -1,23 +1,23 @@
 package tests.cemil;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class US07_TC02 extends TestBaseRapor {
+public class US14_TC03 extends TestBaseRapor {
+
+
+    // After logging in as a registered user, I should be able to confirm that
+    // I can make a change of language.
 
     @Test
     public void test01() {
 
-        //As a registered user, I should be able to reach the
-        //dasboard page and that the items on the page are displayable
-
         HomePage homePage = new HomePage();
-        extentTest = extentReports.createTest("Dashboard elements displayed test",
-                " User tests that the dashboard elements are visible");
+        extentTest = extentReports.createTest("Login test.",
+                "As a registered user, I should be able to log in.");
 
         extentTest.info("Browser opens");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -29,13 +29,17 @@ public class US07_TC02 extends TestBaseRapor {
         homePage.emailtextBox.sendKeys(ConfigReader.getProperty("scGecerliEmailCO"));
         homePage.passwordTextBox.sendKeys(ConfigReader.getProperty("scGecerliPasswordCO"));
         homePage.loginButonu.click();
+        extentTest.info("Go to the profile section");
+        homePage.profilPageCO.click();
 
-        extentTest.info("Visibility testing of elements on the Dashboard page");
-        Assert.assertTrue(homePage.dashboardVcardButonu.isDisplayed(),"Dashboard Vcard Button could not be displayed!");
-        Assert.assertTrue(homePage.dashboardPageElement1.isDisplayed(),"Dashboard element1 could not be displayed!");
 
-        extentTest.pass("Dashboard visibility test successful");
+        extentTest.pass("Verification test successful");
 
         extentTest.info("Browser closed");
+
     }
+
+
+
+
 }
