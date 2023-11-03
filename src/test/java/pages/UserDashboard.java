@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import pages.AdminDashboard;
 import utilities.Driver;
 
@@ -497,67 +498,65 @@ public WebElement Dashboardtext;
 
 
 
-
-
-
     //Hakan
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//*[@id='sidebar']/div[2]/ul/li[6]/a/span[2]")
+    public WebElement settingsButonu;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+    public WebElement settingsHearder;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//h1")
+    public WebElement credentials;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//*[@id='stripeEnable']")
+    public WebElement stripeCheckbox;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@placeholder='Stripe key']")
+    public WebElement stripeKey;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@placeholder='Stripe Secret']")
+    public WebElement stripeSecret;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//*[@id='paypalEnable']")
+    public WebElement paypalCheckbox;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@placeholder='Paypal Client Id']")
+    public WebElement paypalClientId;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@placeholder='Paypal Secret']")
+    public WebElement paypalSecret;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@placeholder='Paypal Mode']")
+    public WebElement paypalMode;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//*[@id='select2-userCurrencySettingId-container']")
+    public WebElement currency;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement currencyTextBox;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//*[@id='select2-userCurrencySettingId-result-3g5x-2']")
+    public WebElement euro;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//label[@for='time_format-1']")
+    public WebElement timeFormatButonu;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@name='enable_contact']")
+    public WebElement enableContactCheckBox;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@name='hide_stickybar']")
+    public WebElement hideStickybarCheckBox;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//input[@name='whatsapp_share']")
+    public WebElement whatsappShareCheckBox;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement saveButonu;
+    //Anasayfa>>UserDashboard>>Settings
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement updateSuccessfullyMessage;
 
 
 

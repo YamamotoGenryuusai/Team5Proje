@@ -499,17 +499,21 @@ public class HomePage extends UserDashboard {
  
   //Hakan
 
+    //Homepage >> SignIn
+  @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+  public WebElement signInButtonHT;
 
+    //Homepage >> SignIn >> EmailTextBox
+  @FindBy(xpath = "//input[@id='email']")
+  public WebElement emailtextBoxHT;
 
+    //Homepage >> SignIn >> PassworddTextBox
+  @FindBy(xpath = "//input[@id='password']")
+  public WebElement passwordTextBoxHT;
 
-
-
-
-
-
-
-
-
+    //Homepage >> SignIn >> LoginButonu
+  @FindBy(xpath = "//button[@class='btn btn-primary']")
+  public WebElement loginButonuHT;
 
 
 

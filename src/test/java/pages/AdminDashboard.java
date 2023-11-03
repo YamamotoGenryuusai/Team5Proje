@@ -499,95 +499,96 @@ public class AdminDashboard {
 
 //Hakan
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Anasayfa>>AdminDashboard>>frontCMS
+ @FindBy(xpath = "//*[@id='sidebar']/div[2]/ul/li[16]/a/span[2]")
+ public WebElement frontCMSButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS
+ @FindBy(xpath = "//*[@id='nav-header']/div/div/ul/li[22]")
+ public WebElement testimonialsButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS
+ @FindBy(xpath = "(//a[@class='nav-link p-0 '])[22]")
+ public WebElement enquiriesButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+ public WebElement testimonialsactiveButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Enquiries
+ @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+ public WebElement enquiriesactiveButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='addTestimonialBtn']")
+ public WebElement addTestimonialsButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='name']")
+ public WebElement testimonialsName;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='description']")
+ public WebElement testimonialsDescription;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='addFrontTestimonialForm']/div[1]/div[3]/div/div/span/label")
+ public WebElement image;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='testimonialSave']")
+ public WebElement testimonialSaveButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//div[@class='toast-message']")
+ public WebElement successMessage;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "(//*[@data-icon='eye'])[1]")
+ public WebElement viewButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "(//*[@data-icon='pen-to-square'])[1]")
+ public WebElement editButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "(//*[@data-icon='trash'])[1]")
+ public WebElement deleteButonu;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='showTestimonialModal']/div/div/div[1]/h2")
+ public WebElement testimonialDetails;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='showTestimonialModal']/div/div/div[1]/button")
+ public WebElement closeDetails;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//input[@id='editName']")
+ public WebElement editName;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//textarea[@id='editDescription']")
+ public WebElement editDescription;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//button[@id='testimonialUpdate']")
+ public WebElement testimonialUpdate;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "(//*[@id='profileImageIcon'])[2]")
+ public WebElement editimage;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//button[@class='swal-button swal-button--confirm']")
+ public WebElement yesDeletebutton;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//div[@class='swal-modal']")
+ public WebElement deletedHT;
+    //Anasayfa>>AdminDashboard>>frontCMS>>Testimonials
+ @FindBy(xpath = "//*[@id='testimonialInputImage']")
+ public WebElement addimage;
+    //Anasayfa>>AdminDashboard>>CashPayments
+ @FindBy(xpath = "//*[@id='sidebar']/div[2]/ul/li[6]/a/span[2]")
+ public WebElement cashPaymentsbutonu;
+    //Anasayfa>>AdminDashboard>>CashPayments
+ @FindBy(xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
+ public WebElement results;
+    //Anasayfa>>AdminDashboard>>CashPayments
+ @FindBy(xpath = "//*[@id='nav-header']/div/div/ul/li[8]/a")
+ public WebElement cashPaymentsHeader;
+    //Anasayfa>>AdminDashboard>>CashPayments
+ @FindBy(xpath = "//div[@class='table-responsive']")
+ public WebElement manuelPayments;
+    //Anasayfa>>AdminDashboard>>CashPayments
+ @FindBy(xpath = "(//button[@class='page-link'])[1]")
+ public WebElement button2;
+    //Anasayfa>>AdminDashboard>>CashPayments
+ @FindBy(xpath = "(//button[@class='page-link'])[9]")
+ public WebElement button9;
+    //Anasayfa>>AdminDashboard>>CashPayments
+ @FindBy(xpath = "(//button[@class='page-link'])[11]")
+ public WebElement button22;
 
 
 
