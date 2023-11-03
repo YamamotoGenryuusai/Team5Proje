@@ -699,7 +699,7 @@ public WebElement totalactiveuserselement;
 
     //Tugce
     // Admin dashboard >> Affiliate Users sekmesi
-    @FindBy(xpath = "//*[text()='Affiliate Users']")
+    @FindBy(xpath = "(//*[text()='Affiliate Users'])[1]")
     public WebElement affiliateUsersSekmesi;
     @FindBy(xpath = "//*[@class='nav-link p-0 active']")
     public WebElement affiliateUserYaziElementi;
@@ -719,28 +719,28 @@ public WebElement totalactiveuserselement;
     public WebElement affiliationTransactionsSekmesi;
     @FindBy(xpath = "//*[@class='nav-link p-0 active']")
     public WebElement affiliationTransactionsYaziElementi;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[text()='User']")
+    public WebElement affiliationTransactionsUserElementi;
+    @FindBy(xpath = "//*[text()='Amount']")
+    public WebElement affiliationTransactionsAmountElementi;
+    @FindBy(xpath = "//*[text()='Approval Status']")
+    public WebElement affiliationTransactionsApprovalStatusElementi;
+    @FindBy(xpath = "//*[@class='badge bg-warning me-2']")
+    public WebElement affiliationTransactionsInProcess;
+    @FindBy (xpath = "(//*[@class='modal-content'])[5]")
+    public WebElement affiliationTransactionsViewDetails;
+    @FindBy(xpath = "//*[text()='Date']")
+    public WebElement affiliationTransactionsDateElementi;
+    @FindBy(xpath = "//*[text()='Action']")
+    public WebElement affiliationTransactionsActionElementi;
+    @FindBy(xpath = "(//*[@class='svg-inline--fa fa-eye text-info'])")
+    public WebElement affiliationTransactionsActionButonu;
+    @FindBy(xpath = "(//*[@class='mb-1 text-decoration-none fs-6'])[2]")
+    public WebElement affUsersKullaniciIsimElementi;
+    @FindBy (xpath = "(//*[@class='mb-1 text-decoration-none fs-6'])[1]")
+    public WebElement affTransactionKullaniciIsimElementi;
+    @FindBy (xpath = "(//button[@type='button'])[24]")
+    public WebElement affiliationTransactionsKapamaButonu;
 
 
 

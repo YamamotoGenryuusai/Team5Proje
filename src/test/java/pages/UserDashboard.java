@@ -692,56 +692,53 @@ public WebElement sendemailbuttonu;
 
 
 
-
-
-
     //Tugce
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[text()='Affiliations']")
+    public WebElement affiliationsSekmesi;
+    @FindBy(xpath = "//input[@placeholder='Copy Url']")
+    public WebElement copyLinkUrl;
+    @FindBy(xpath = "//*[@class = 'nav-link p-0 active']")
+    public WebElement yeniPencereSayfaElementi;
+    @FindBy(id = "first_name")
+    public WebElement firstNameElementi;
+    @FindBy(id = "last_name")
+    public WebElement lastNameElementi;
+    @FindBy(id = "email")
+    public WebElement emailElementi;
+    @FindBy(id = "password")
+    public WebElement passwordElementi;
+    @FindBy(id = "password_confirmation")
+    public WebElement passwordConfirmationElementi;
+    @FindBy(id = "privacyPolicyCheckbox")
+    public WebElement privacyPolicyCheckboxElementi;
+    @FindBy (xpath = "//*[@class='btn btn-primary']")
+    public WebElement submitButonu;
+    @FindBy (id = "withdrawal-tab")
+    public WebElement withdrawalSekmesi;
+    @FindBy (xpath = "(//*[@class='btn btn-primary'])[2]")
+    public WebElement withdrawAmountButonu;
+    @FindBy (id = "withdrawAmount" )
+    public WebElement enterAmountKutusu;
+    @FindBy (id = "paypalEmail")
+    public WebElement paypalEmailKutusu;
+    @FindBy (xpath = "//*[text()='Save']")
+    public WebElement saveButonu;
+    @FindBy (xpath = "//*[@id='dropdownMenuButton1']")
+    public WebElement userDropDown;
+    @FindBy (xpath = "(//*[@class='dropdown-item text-gray-900'])[2]")
+    public WebElement manageSubscriptionSekmesi;
+    @FindBy (xpath = "//*[@class='btn btn-primary']")
+    public WebElement upgradePlanbutonu;
+    @FindBy (xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div/div/div/div/div[1]/ul/li[3]/a")
+    public WebElement unlimitedButonu;
+    @FindBy (xpath = "(//*[contains(text(), 'Plan')])[7]")
+    public WebElement unlimitedOption;
+    @FindBy (id ="select2-paymentType-container")
+    public WebElement selectPayment;
+    @FindBy (xpath = "(//*[@class='btn btn-primary rounded-pill mx-auto d-block makePayment'])[2]")
+    public WebElement paySwitchButonElementi;
+    @FindBy (xpath = "(//*[@class='select2-selection select2-selection--single'])[1]")
+    public WebElement stripeDropDownu;
 
 
 
