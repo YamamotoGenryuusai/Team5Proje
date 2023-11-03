@@ -6,9 +6,10 @@ import pages.HomePage;
 import utilities.*;
 
 public class US03_TC02 extends TestBaseRapor {
-    HomePage homePage=new HomePage();
+
     @Test
     public void test01() {
+        HomePage homePage=new HomePage();
         extentTest = extentReports.createTest("Ana sayfa Choose Plan butonu testi","Choose Plan butonu aktif,görünür ve ilgili sayfaya yönlendirmelidir.");
         SoftAssert softAssert = new SoftAssert();
         extentTest.info("Site ana sayfasına gider.");
@@ -31,6 +32,7 @@ public class US03_TC02 extends TestBaseRapor {
     }
     @Test
     public void test02(){
+        HomePage homePage=new HomePage();
         extentTest=extentReports.createTest("Plan seçim tuş testi","Plan seçim tusları görünür ve aktif olmalıdır.");
         SoftAssert softAssert=new SoftAssert();
         extentTest.info("Tarayıcı açılır site ana sayfasına gidilir.");
