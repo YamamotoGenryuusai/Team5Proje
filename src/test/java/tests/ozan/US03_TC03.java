@@ -6,9 +6,10 @@ import pages.HomePage;
 import utilities.*;
 
 public class US03_TC03 extends TestBaseRapor {
-    HomePage homePage=new HomePage();
+
     @Test
     public void test01(){
+        HomePage homePage=new HomePage();
         extentTest = extentReports.createTest("Ana sayfa Contact Us bölümü Mail textbox testleri","Mail textboxı görünür ve aktif olmalıdır.");
         SoftAssert softAssert=new SoftAssert();
         extentTest.info("Tarayıcı açılır ve site ana sayfaya gidilir.");
@@ -29,6 +30,7 @@ public class US03_TC03 extends TestBaseRapor {
     }
     @Test
     public void test02(){
+        HomePage homePage=new HomePage();
         extentTest = extentReports.createTest("Ana sayfa Contact Us telefon yazı elementi testi.","Telefon görünür ve aktif olmalıdır.");
         SoftAssert softAssert=new SoftAssert();
         extentTest.info("Tarayıcı açılır site ana sayfaya gidilir.");
