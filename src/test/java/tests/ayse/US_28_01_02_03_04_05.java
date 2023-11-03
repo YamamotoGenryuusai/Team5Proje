@@ -88,8 +88,11 @@ public class US_28_01 extends TestBaseRapor {
         extentTest.info("Withdraw Transactions menusune tiklanir.");
 
         //07- Acilan sayfada kullanicilar listesini goruntuledigi dogrulanir.
-        List<WebElement> odemeYapilanKullanicilar = Driver.getDriver().findElements(By.xpath("//tbody/tr/td[1]"));
-
+        List<WebElement> odemeYapilanKullanicilar = Driver.getDriver().findElements(By.xpath("//a[@class='mb-1 text-decoration-none fs-6']"));
+        for (WebElement each: odemeYapilanKullanicilar
+             ) {
+            System.out.println(each.getText());
+        }
         softAssert.assertTrue(odemeYapilanKullanicilar.size()>0);
         extentTest.pass("Withdraw Transactions menüsü kullanicilar listesi goruntulenebilir.");
 
@@ -130,9 +133,11 @@ public class US_28_01 extends TestBaseRapor {
         extentTest.info("Withdraw Transactions menusune tiklanir.");
 
         //07- Acilan sayfada odeme tutari goruntuledigi dogrulanir.
-        List<WebElement> odemeTutari = Driver.getDriver().findElements(By.xpath("//tbody/tr/td[2]"));
-        int size= odemeTutari.size();
-        System.out.println(size);
+        List<WebElement> odemeTutari = Driver.getDriver().findElements(By.xpath("//span[@class='badge bg-success me-2']"));
+        for (WebElement each: odemeTutari
+             ) {
+            System.out.println(each.getText());
+        }
         softAssert.assertTrue(odemeTutari.size()>0);
         extentTest.pass("Withdraw Transactions odeme tutari goruntulenebilir.");
 
@@ -173,7 +178,7 @@ public class US_28_01 extends TestBaseRapor {
         extentTest.info("Withdraw Transactions menusune tiklanir.");
 
         //07- Acilan sayfada odeme tipi goruntuledigi dogrulanir.
-        List<WebElement> odemeTipi = Driver.getDriver().findElements(By.xpath("//tbody/tr/td[3]"));
+        List<WebElement> odemeTipi = Driver.getDriver().findElements(By.xpath("//span[@class='badge bg-primary me-2']"));
         int size= odemeTipi.size();
         System.out.println(size);
         softAssert.assertTrue(odemeTipi.size()>0);
@@ -217,7 +222,7 @@ public class US_28_01 extends TestBaseRapor {
         extentTest.info("Withdraw Transactions menusune tiklanir.");
 
         //07- Acilan sayfada odeme tarihi goruntuledigi dogrulanir.
-        List<WebElement> odemeTarihi = Driver.getDriver().findElements(By.xpath("//tbody/tr/td[4]"));
+        List<WebElement> odemeTarihi = Driver.getDriver().findElements(By.xpath("//span[@class='badge bg-secondary me-2']"));
         int size= odemeTarihi.size();
         System.out.println(size);
 
