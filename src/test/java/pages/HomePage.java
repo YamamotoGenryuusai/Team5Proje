@@ -471,7 +471,7 @@ public class HomePage extends UserDashboard {
  public WebElement eDDeletePencereesiDeleteText;
 
  // Home page >> Enquiries >> Delete Penceresi >> Deleted! Text’i
- @FindBy(xpath = "//div[@*='Deleted !']")
+ @FindBy(xpath = "//div[text()='Deleted !']")
  public WebElement deletePenceresiDeletedMesaji;
 
  // Home page >> Enquiries >> Delete Penceresi >> Yes Delete Butonu
