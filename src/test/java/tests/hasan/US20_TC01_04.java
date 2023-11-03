@@ -21,7 +21,6 @@ public class US20_TC01_04 extends TestBaseRapor {
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-
         homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
@@ -63,7 +62,6 @@ public class US20_TC01_04 extends TestBaseRapor {
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-
         homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 

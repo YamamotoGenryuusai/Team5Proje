@@ -9,20 +9,22 @@ import java.io.IOException;
 
 public class US_24_TC01_08 extends TestBaseRapor {
 
-    HomePage homePage = new HomePage();
 
     // Admin bilgileri ile 'https://qa.smartcardlink.com/' sitesine başarılı bir şekilde giriş yapılabilmelidir.
     @Test
     public void test01() {
 
+        HomePage homePage = new HomePage();
+
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Admin pozitif login testi", "Admin, doğru email ve password ile giriş yapabilmelidir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
@@ -47,18 +49,23 @@ public class US_24_TC01_08 extends TestBaseRapor {
         extentTest.info("Browser kapatılır.");
     }
 
+
+
     //Admin bilgileri ile giriş yaptıktan sonra 'Users' sekmesi görünür ve tıklanabilir olmalıdır. Ayrıca, tıklama işlemi doğru sayfaya yönlendirmelidir.
     @Test
     public void test02() {
+
+        HomePage homePage = new HomePage();
 
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Subscribed User Plans sekmesi testi", "'Users' sekmesi görünür ve tıklanabilir olmalıdır. Ayrıca, tıklama işlemi doğru sayfaya yönlendirmelidir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
@@ -93,14 +100,17 @@ public class US_24_TC01_08 extends TestBaseRapor {
     @Test
     public void test03() {
 
+        HomePage homePage = new HomePage();
+
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Subscribed User Plans sekmesi testi", "'User name' sütun başlığı altında kayıtlı kullanıcı adının görülebilmesi gerekmektedir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
@@ -137,14 +147,17 @@ public class US_24_TC01_08 extends TestBaseRapor {
     @Test
     public void test04() {
 
+        HomePage homePage = new HomePage();
+
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Subscribed User Plans sekmesi testi", "Plan name' sütun başlığı altında kullanıcının plan adının görülebilmesi gerekmektedir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
@@ -182,14 +195,17 @@ public class US_24_TC01_08 extends TestBaseRapor {
     @Test
     public void test05() {
 
+        HomePage homePage = new HomePage();
+
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Subscribed User Plans sekmesi testi", "'Start Date' sütun başlığı altında kullanıcının üyelik başlangıç tarihinin görülebilmesi gerekmektedir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
@@ -227,14 +243,17 @@ public class US_24_TC01_08 extends TestBaseRapor {
     @Test
     public void test06() {
 
+        HomePage homePage = new HomePage();
+
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Subscribed User Plans sekmesi testi", "'End Date' sütun başlığı altında kullanıcının üyelik bitiş tarihinin görülebilmesi gerekmektedir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
@@ -272,14 +291,17 @@ public class US_24_TC01_08 extends TestBaseRapor {
     @Test
     public void test07() throws IOException {
 
+        HomePage homePage = new HomePage();
+
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Subscribed User Plans sekmesi testi", "'End Date' sütun başlığı altında kullanıcının üyelik bitiş tarihinin görülebilmesi gerekmektedir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
@@ -322,14 +344,17 @@ public class US_24_TC01_08 extends TestBaseRapor {
     @Test
     public void test08() {
 
+        HomePage homePage = new HomePage();
+
         //01_Browser açılır ve ziyaretçi https://qa.smartcardlink.com anasayfasına gider.
         extentTest = extentReports.createTest("Subscribed User Plans sekmesi testi", "'End Date' sütun başlığı altında kullanıcının üyelik bitiş tarihinin görülebilmesi gerekmektedir.");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Browser acilir ve kullanıcı anasayfaya gider.");
+        JSUtilities.scrollToElement(Driver.getDriver(),homePage.signInButtonHC);
         ReusableMethods.wait(2);
 
         //02_Anasyafada bulunan 'Sign In' butonuna tıklanır.
-        JSUtilities.clickWithJS(Driver.getDriver(),homePage.signInButtonHC);
+        homePage.signInButtonHC.click();
         extentTest.info("Signin butonu tıklanır.");
 
         //03_'Email' olarak  geçerli 'admin_email' girilir.
