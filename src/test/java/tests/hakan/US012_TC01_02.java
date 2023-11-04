@@ -35,6 +35,10 @@ public class US012_TC01_02 extends TestBaseRapor {
         extentTest.info("Login butonuna tiklanir.");
         homePage.loginButonuHT.click();
 
+        extentTest.info("Kullanici paneline erisebildigi dogrulanmalidir.");
+        Assert.assertTrue(homePage.dashboardHearderTextHT.isDisplayed());
+        extentTest.pass("Kullanici paneline basarili sekilde erisildi.");
+
         extentTest.info("Menu listesindeki Settings butonuna tiklanir.");
         homePage.settingsButonu.click();
         ReusableMethods.wait(2);

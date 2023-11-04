@@ -515,6 +515,10 @@ public class HomePage extends UserDashboard {
   @FindBy(xpath = "//button[@class='btn btn-primary']")
   public WebElement loginButonuHT;
 
+  //HomePage >> Dashboard
+  @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+  public WebElement dashboardHearderTextHT;
+
 
 
 

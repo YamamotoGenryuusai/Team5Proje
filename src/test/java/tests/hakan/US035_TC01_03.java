@@ -111,7 +111,7 @@ public class US035_TC01_03 extends TestBaseRapor {
         ReusableMethods.wait(5);
 
         extentTest.info("Dosya seçme işlemi için robot kullanma");
-        StringSelection stringSelection = new StringSelection("C:\\Users\\USER\\Desktop\\logo.jpg"); //
+        StringSelection stringSelection = new StringSelection("C:\\Users\\USER\\Desktop\\logo.jpg");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
         ReusableMethods.wait(2);
 
