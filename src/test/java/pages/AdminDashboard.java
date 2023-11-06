@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 import utilities.Driver;
 
 public class AdminDashboard {
@@ -199,49 +200,49 @@ public class AdminDashboard {
 
 //Cemil
 
+    // Homepage //Sign in//Admin Log in// Countries
+    @FindBy(xpath ="//span[text()='Countries']")
+    public WebElement countriesButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries
+    @FindBy(xpath ="//div[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement countriesCountCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//States
+    @FindBy(xpath ="//a[@href='https://qa.smartcardlink.com/sadmin/states' and contains(text(),'States')]")
+    public WebElement stateButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//States
+    @FindBy(xpath ="//a[@href='https://qa.smartcardlink.com/sadmin/cities' and contains(text(),'Cities')]")
+    public WebElement cityButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//States Count
+    @FindBy(xpath ="//div [@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement stateCountCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//City Count
+    @FindBy(xpath ="//div [@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement cityCountCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country
+    @FindBy(xpath ="//a[@id='newCountryBtn']")
+    public WebElement newcountryButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country // Add Name
+    @FindBy(xpath ="//input[@id='countryName']")
+    public WebElement addCountryButtonCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country//ShortCode
+    @FindBy(xpath ="//input[@id='short_code']")
+    public WebElement addShortCodeCO;
 
+    // Homepage //Sign in//Admin Log in// Countries//New Country//Phone Code
+    @FindBy(xpath ="//input[@id='phone_code']")
+    public WebElement addPhoneCodeCO;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Homepage //Sign in//Admin Log in// Countries//New Country//Save Button
+    @FindBy(xpath ="//button[@id='btnSave']")
+    public WebElement addSaveCountryButtonCO;
 
 
 
@@ -398,81 +399,80 @@ public WebElement totalactiveuserselement;
 
 
 //Gulay
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ // SAdmin Dashboard Text
+ @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+ public WebElement sAdminDashboardText;
+
+@FindBy(xpath = "//span[text()='Coupon Codes']")
+public WebElement couponCodesButonu_gg;
+
+@FindBy (xpath = "//a[text()='Add Coupon Code']")
+public WebElement addCouponCodeButonu_gg;
+
+@FindBy(xpath = "(//h3[@class='modal-title'])[1]")
+public WebElement addCouponCodePenceresiAddCouponCodeTextigg;
+
+@FindBy(xpath = "(//input[@type='text'])[2]")
+public  WebElement addCouponCodeCouponNameAlanigg;
+
+
+@FindBy (xpath = "//input[@id='fixedType']")
+public WebElement addCouponCodeFixedTypeCheckBoxgg;
+
+@FindBy(xpath = "//input[@id='percentageType']")
+public WebElement addCouponCodePercentageCheckBoxgg;
+
+@FindBy (xpath = "//input[@id='couponDiscount']")
+public WebElement addCouponCodeEnterCouponDiscountgg;
+
+@FindBy(xpath = "//input[@id='couponExpireAt']")
+public WebElement addCouponCodePercentageExprireAtgg;
+
+@FindBy (xpath = "(//button[@type='submit'])[1]")
+public  WebElement addCouponCodeSaveButonu;
+
+@FindBy(xpath = "//div[@class='toast-message']")
+public WebElement couponCodeCreatedSuccesfullyText;
+
+@FindBy(xpath = "(//select[@class='flatpickr-monthDropdown-months'])[1]")
+public  WebElement addcouponCodeMonths;
+
+
+@FindBy(xpath = "(//span[@aria-label='November 29, 2023'])[1]")
+public  WebElement addCouponCodeDate;
+@FindBy(xpath = "(//input[@name='status'])[1]")
+public  WebElement couponCodesStatusButonugg;
+@FindBy(xpath = "//div[@class='toast-message']")
+public WebElement couponCodeStatusUpdatedMessage_gg;
+@FindBy(xpath = "(//*[@data-icon='pen-to-square'])[1]")
+public WebElement couponCodesEditButonugg;
+
+@FindBy(xpath = "(//a[@title='Delete'])[1]")
+public WebElement couponCodesDeleteButonugg;
+
+@FindBy(xpath = "//button[text()='Yes, Delete!']")
+public  WebElement couponCodesYesDeleteTextgg;
+@FindBy (xpath = "//input[@id='editCouponName']")
+public WebElement editCouponCode_CouponeNamealanigg;
+@FindBy(xpath = "//input[@id='editCouponDiscount']")
+public WebElement editCouponCode_CouponeDiscountgg;
+@FindBy(xpath = "//input[@id='editCouponFixedType']")
+public WebElement editCouponCode_FixedTypegg;
+@FindBy(xpath = "//input[@id='editCouponPercentageType']")
+public WebElement editCouponCode_percentagegg;
+@FindBy (xpath = "//input[@id='editCouponExpireAt']")
+public WebElement editCouponCode_ExpireAtgg;
+
+@FindBy(xpath = "(//select[@aria-label='Month'])[2]")
+public WebElement editCouponCode_November;
+@FindBy (xpath = "(//span[@aria-label='November 10, 2023'])[2]")
+public WebElement editCouponCode_November10;
+@FindBy(xpath = "//*[@id='editCouponCodeSaveBtn']")
+public WebElement editCouponCodeSaveButonugg;
+@FindBy(xpath = "//div[@class='toast-message']")
+public WebElement couponCodesCodesUpdatesSuccesfullyTextgg;
+@FindBy (xpath = "//div[text()='Deleted !']")
+public WebElement couponCodesDeletedTextgg;
 
 
 
@@ -699,7 +699,7 @@ public WebElement totalactiveuserselement;
 
     //Tugce
     // Admin dashboard >> Affiliate Users sekmesi
-    @FindBy(xpath = "//*[text()='Affiliate Users']")
+    @FindBy(xpath = "(//*[text()='Affiliate Users'])[1]")
     public WebElement affiliateUsersSekmesi;
     @FindBy(xpath = "//*[@class='nav-link p-0 active']")
     public WebElement affiliateUserYaziElementi;
@@ -719,28 +719,28 @@ public WebElement totalactiveuserselement;
     public WebElement affiliationTransactionsSekmesi;
     @FindBy(xpath = "//*[@class='nav-link p-0 active']")
     public WebElement affiliationTransactionsYaziElementi;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[text()='User']")
+    public WebElement affiliationTransactionsUserElementi;
+    @FindBy(xpath = "//*[text()='Amount']")
+    public WebElement affiliationTransactionsAmountElementi;
+    @FindBy(xpath = "//*[text()='Approval Status']")
+    public WebElement affiliationTransactionsApprovalStatusElementi;
+    @FindBy(xpath = "//*[@class='badge bg-warning me-2']")
+    public WebElement affiliationTransactionsInProcess;
+    @FindBy (xpath = "(//*[@class='modal-content'])[5]")
+    public WebElement affiliationTransactionsViewDetails;
+    @FindBy(xpath = "//*[text()='Date']")
+    public WebElement affiliationTransactionsDateElementi;
+    @FindBy(xpath = "//*[text()='Action']")
+    public WebElement affiliationTransactionsActionElementi;
+    @FindBy(xpath = "(//*[@class='svg-inline--fa fa-eye text-info'])")
+    public WebElement affiliationTransactionsActionButonu;
+    @FindBy(xpath = "(//*[@class='mb-1 text-decoration-none fs-6'])[2]")
+    public WebElement affUsersKullaniciIsimElementi;
+    @FindBy (xpath = "(//*[@class='mb-1 text-decoration-none fs-6'])[1]")
+    public WebElement affTransactionKullaniciIsimElementi;
+    @FindBy (xpath = "(//button[@type='button'])[24]")
+    public WebElement affiliationTransactionsKapamaButonu;
 
 
 

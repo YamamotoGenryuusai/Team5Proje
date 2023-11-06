@@ -47,13 +47,11 @@ public class US14_TC02 extends TestBaseRapor {
 
         extentTest.info("New password is confirmed");
         homePage.confirmPasswordCO.sendKeys(ConfigReader.getProperty("scconfirmPassword")+Keys.TAB);
-        
 
         extentTest.info("Click on the save button, password changing");
         homePage.savePasswordChangeButtonCO.click();
 
-        extentTest.pass("verification test successful");
-
+        extentTest.pass("Verification test successful");
 
         extentTest.info("Browser closed");
 

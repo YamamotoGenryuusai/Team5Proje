@@ -55,7 +55,6 @@ public class US13_TC02 extends TestBaseRapor {
         homePage.editPhoneBoxCO.sendKeys(newPhoneCO);
 
         extentTest.info("Save changes");
-        homePage.saveButtonCO.isEnabled();
         Assert.assertTrue(homePage.saveButtonCO.isEnabled(),"Profile change test failed");
 
         extentTest.info("Browser closed");

@@ -7,50 +7,40 @@ import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_10_TC_09 {
+public class US_10_TC_09 extends TestBaseRapor {
     SoftAssert softAssert= new SoftAssert();
     @Test
     public void US_10_09 () {
 
-
-        //1-	Browser acilir
-        //2-	Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir.
-        // 3-	Sitenin log in  sayfasina gidilir
+        extentTest=extentReports.createTest("mesaj silme testi ");
 
         Driver.getDriver().get(ConfigReader.getProperty("scLoginUrl_gg"));
-
+        extentTest.info("Browser acilir, Adres çubuğuna log in URL girilir, Enter tusuna tiklanir. Log in gidilir");
         UserDashboard userDashboard = new UserDashboard();
         HomePage homePage= new HomePage();
-        // 4-	 Email alanına geçerli email girilir
 
         homePage.emailtextBox.sendKeys(ConfigReader.getProperty("gecerliEMail_gg"));
-
-
-        // 5-   Password alanına gecerli password girilir
+        extentTest.info("Email alanına geçerli email girilir");
 
         homePage.passwordTextBox.sendKeys(ConfigReader.getProperty("gecerliSifre_gg"));
-
-
-        // 6- Log in butonuna tiklanir
+        extentTest.info("Password alanına gecerli password girilir");
 
         homePage.loginButonu.click();
-
-        // 7 	Enquiries butonuna tıklanır
-
+        extentTest.info("Log in butonuna tiklanir");
         homePage.adminEnquiriesText_gg.click();
+        extentTest.info("Enquiries butonuna tıklanır");
 
-        // 8-	Enquries sayfasında delete ikonuna tıklanır
         homePage.enquiriesSayfasiDeleteIkonu_gg.click();
+        extentTest.info("Enquries sayfasında delete ikonuna tıklanır");
 
         ReusableMethods.wait(1);
-        //9- Yes Delete Butonuna tiklar
         homePage.deletePenceresiYesDeleteButonu.click();
+        extentTest.info("Yes Delete Butonuna tiklar");
 
-        //10- Mesajın silindigini dogrular
-
-        softAssert.assertTrue(homePage.deletePenceresiYesDeleteButonu.isDisplayed());
-        Driver.closeDriver();
+        softAssert.assertTrue(homePage.deletePenceresiDeletedMesaji.isDisplayed());
+        extentTest.info("Mesajın silindigini dogrulandi");
 
     }
 

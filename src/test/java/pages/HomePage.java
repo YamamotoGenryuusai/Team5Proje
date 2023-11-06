@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -156,16 +157,32 @@ public class HomePage extends UserDashboard {
     public WebElement alertYazisi;
     @FindBy(xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
     public WebElement toplamkullaniciSayisi;
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-key'][1]")
+    public WebElement changePasswordButton;
+    @FindBy(xpath = "(//*[@id=\"new_password\"])[2]")
+    public WebElement userspasswordTextBox;
+    @FindBy(xpath = "(//*[@id=\"confirm_password\"])[2]")
+    public WebElement usersconfirmPasswordTextBox;
+    @FindBy(xpath = "//*[@id=\"UserPasswordChangeBtn\"]")
+    public WebElement passwordSaveButton;
+    @FindBy(xpath = "//div[@id='changeUserPasswordModal']")
+    public WebElement successText;
+    @FindBy(xpath = "//a[@class='btn btn-primary ms-auto']")
+    public WebElement addUserButton;
+    @FindBy(xpath = "//*[@id=\"email\"]")
+    public WebElement addUseremailTextBox;
+    @FindBy(xpath = "//*[@id=\"password\"]")
+    public WebElement addUserpasswordTextBox;
+    @FindBy(xpath = "//*[@id=\"cPassword\"]")
+    public WebElement addUserConfirmpasswordTextBox;
+    @FindBy(xpath = "//*[@id=\"phoneNumber\"]")
+    public WebElement addUserPhoneNumber;
+    @FindBy(xpath = "//*[@id=\"userFirstName\"]")
+    public WebElement addUserFirstName;
+    @FindBy(xpath = "//*[@id=\"userLastName\"]")
+    public WebElement addUserLastName;
+    @FindBy(xpath = "//input[@type='submit']")
+    public WebElement addUserSubmit;
 
 
 
@@ -261,6 +278,14 @@ public class HomePage extends UserDashboard {
     // Profile Page //Account Settings//Confirm Password
     @FindBy(xpath ="//span[@id='select2-selectLanguage-container']")
     public WebElement selectLanguageBoxCO;
+
+    // Profile Page //Account Settings//Sign Out
+    @FindBy(xpath ="//span[contains(text(), 'Sign Out')]")
+    public WebElement signOutButtonCO;
+
+    // Homepage //Sign in//Admin Log in// Countries
+    @FindBy(xpath ="//span[text()='Countries']")
+    public WebElement countriesButtonCO;
 
 
 
@@ -474,7 +499,7 @@ public class HomePage extends UserDashboard {
  public WebElement eDDeletePencereesiDeleteText;
 
  // Home page >> Enquiries >> Delete Penceresi >> Deleted! Text’i
- @FindBy(xpath = "//div[@*='Deleted !']")
+ @FindBy(xpath = "//div[text()='Deleted !']")
  public WebElement deletePenceresiDeletedMesaji;
 
  // Home page >> Enquiries >> Delete Penceresi >> Yes Delete Butonu

@@ -12,10 +12,11 @@ public class US07_TC02 extends TestBaseRapor {
     @Test
     public void test01() {
 
-        //Dashboard sayfasındaki ögeler sayfa yüklendiğinde görünür ve aktif olmalıdır
+        //As a registered user, I should be able to reach the
+        //dasboard page and that the items on the page are displayable
 
         HomePage homePage = new HomePage();
-        extentTest = extentReports.createTest("dashboard elements displayed test",
+        extentTest = extentReports.createTest("Dashboard elements displayed test",
                 " User tests that the dashboard elements are visible");
 
         extentTest.info("Browser opens");

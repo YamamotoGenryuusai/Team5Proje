@@ -6,34 +6,35 @@ import pages.AdminDashboard;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_26_TC_02 {
+public class US_26_TC_02 extends TestBaseRapor {
 
     @Test
-    public void affiliateUsersSekmesiTesti(){
-        // 1- Browser acilir ve istenen URL (https://qa.smartcardlink.com/) yazilarak test sayfasina gidilir
+    public void US_26_TC_02(){
+        extentTest = extentReports.createTest("affiliateUsersSekmesiTesti", "Affiliate Users bolumunun tiklanabilir ve ulasilabilir oldugu dogrulanir");
+
+        extentTest.info("1- Browser acilir ve istenen URL (https://qa.smartcardlink.com/) yazilarak test sayfasina gidilir");
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
 
-        // 2- Login butonuna tiklanir
+        extentTest.info("2- Login butonuna tiklanir");
         HomePage adminHomePage = new HomePage();
         adminHomePage.adminSigninButonu.click();
 
-        // 3- Gecerli bilgilerle admin girisi yapilir
+        extentTest.info("3- Gecerli bilgilerle admin girisi yapilir");
         adminHomePage.adminEmailBox.sendKeys(ConfigReader.getProperty("scAdminEmail"));
         adminHomePage.adminPasswordBox.sendKeys(ConfigReader.getProperty("scAdminPassword"));
         adminHomePage.adminLoginButonu.click();
 
-        // 4- Dashboard bolumunden 'Affiliation Transactions' sekmesinin tiklanabilir oldugu kontrol edilir
+        extentTest.info("4- Dashboard bolumunden 'Affiliate Users' sekmesinin tiklanabilir oldugu kontrol edilir");
         AdminDashboard adminDashboard = new AdminDashboard();
-        Assert.assertTrue(adminDashboard.affiliationTransactionsSekmesi.isEnabled());
+        Assert.assertTrue(adminDashboard.affiliateUsersSekmesi.isEnabled());
 
-        // 5- Dashboard bolumunden 'Affiliation Transactions' sekmesine tiklanir
-        adminDashboard.affiliationTransactionsSekmesi.click();
+        extentTest.info("5- Dashboard bolumunden 'Affiliate Users' sekmesine tiklanir");
+        adminDashboard.affiliateUsersSekmesi.click();
 
-        // 6- 'Affiliation Transactions' bolumunun ulasilabilir oldugu kontrol edilir
-        Assert.assertTrue(adminDashboard.affiliationTransactionsYaziElementi.isDisplayed());
+        extentTest.info("6- 'Affiliate Users' bolumunun ulasilabilir oldugu kontrol edilir");
+        Assert.assertTrue(adminDashboard.affiliateUserYaziElementi.isDisplayed());
 
-        // 7- Browser kapatilir
-        Driver.closeDriver();
     }
 }

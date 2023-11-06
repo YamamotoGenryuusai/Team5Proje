@@ -6,24 +6,27 @@ import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_05_TC_02 {
+public class US_05_TC_02 extends TestBaseRapor {
     @Test
     public void TC_05_02 () {
+        extentTest=extentReports.createTest("Create an account sayfasi goruntuleme testi");
 
-        //1-	Browser acilir
-        //2-	Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir.3-Sitenin ana sayfasina gidilir
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
+        extentTest.info("\"Browser acilir, Adres çubuğuna anasayfa URL girilir, Enter tusuna tiklanir. Sitenin ana sayfasina gidilir\"");
         ReusableMethods.wait(2);
-        //4-	Sign in butonuna tıklanır
+
         HomePage homePage= new HomePage();
         homePage.signInButton.click();
-        //5-	Create an account butonu tıklanır
+        extentTest.info("Sign in butonuna tıklanır");
+
         homePage.createAnAccountLinkgg.click();
-        // 6-	Create an account sayfasına ulasildigi dogrulanir
+        extentTest.info("Create an account butonu tıklanır");
+
         Assert.assertTrue(homePage.createAnAccountTextgg.isDisplayed());
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        extentTest.pass("Create an account sayfasına ulasildi");
 
     }
 }

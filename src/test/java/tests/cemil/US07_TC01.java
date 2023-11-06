@@ -8,10 +8,12 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class US07_TC01 extends TestBaseRapor {
-
+    //As a registered user, I should be able to reach the
+    //dasboard page and that the items on the page are displayable
     @Test
     public void test01(){
-        //Kayıtlı kullanıcı olarak dashboard sayfasına ulaşabilmeli ve ulasilabildigi dogrulanmalidir.
+        //As a registered user, I should be able to reach the
+        //dasboard page and confirmed.
 
         HomePage homePage = new HomePage();
         extentTest=extentReports.createTest("Website home page dashboard accessibility test.",
