@@ -2,7 +2,6 @@ package tests.ayse;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
@@ -11,10 +10,9 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-import java.util.Collections;
 import java.util.List;
 
-public class US_28_01 extends TestBaseRapor {
+public class US_28_01_02_03_04_05 extends TestBaseRapor {
     //AC: Admin bilgileri ile giriş yaptıktan sonra para çekme işlemleri bölümünde
     // ödeme yapılan kullanıcıyı, ödeme tutarını, ödeme tipini ve ödeme tarihini
     // görüntüleyebildiğimi doğrulayabilmeliyim

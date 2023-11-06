@@ -1,7 +1,6 @@
 package tests.ayse;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -13,7 +12,7 @@ import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class US_16_01 extends TestBaseRapor {
+public class US_16_01_02_03_04 extends TestBaseRapor {
 //AC: Sınırsız kayıtlı kullanıcı olarak randevularım sayfasına ulaşabildiğimi ve
 // randevuları görüntüleyebildiğimi doğrulayabilmeliyim
 

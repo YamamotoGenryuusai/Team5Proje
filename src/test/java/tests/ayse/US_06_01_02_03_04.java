@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 
-public class US_06_TC01_03 extends TestBaseRapor {
+public class US_06_01_02_03_04 extends TestBaseRapor {
 
     HomePage homePage=new HomePage();
 
